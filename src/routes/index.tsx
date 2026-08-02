@@ -24,7 +24,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "At Instrex, we provide end-to-end solutions, from uncovering deep market insights and shaping growth strategies to turning them into real, measurable outcomes.",
+          "Insights - Market Research and Analysis. Strategy - Business Growth Blueprint. Execution - Strategy Implementation Facilitation and Funding Support.",
       },
     ],
   }),
