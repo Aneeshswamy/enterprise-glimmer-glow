@@ -11,6 +11,12 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
+import { Route as CaseStudiesRouteImport } from './routes/case-studies'
+import { Route as ConnectWithUsRouteImport } from './routes/connect-with-us'
+import { Route as MarketResearchRouteImport } from './routes/market-research'
+import { Route as ServicesRouteImport } from './routes/services'
+import { Route as StrategyExecutionRouteImport } from './routes/strategy-execution'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +28,110 @@ const AboutRoute = AboutRouteImport.update({
   path: '/about',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
+  id: '/business-strategy',
+  path: '/business-strategy',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CaseStudiesRoute = CaseStudiesRouteImport.update({
+  id: '/case-studies',
+  path: '/case-studies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConnectWithUsRoute = ConnectWithUsRouteImport.update({
+  id: '/connect-with-us',
+  path: '/connect-with-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MarketResearchRoute = MarketResearchRouteImport.update({
+  id: '/market-research',
+  path: '/market-research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesRoute = ServicesRouteImport.update({
+  id: '/services',
+  path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StrategyExecutionRoute = StrategyExecutionRouteImport.update({
+  id: '/strategy-execution',
+  path: '/strategy-execution',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/business-strategy': typeof BusinessStrategyRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/connect-with-us': typeof ConnectWithUsRoute
+  '/market-research': typeof MarketResearchRoute
+  '/services': typeof ServicesRoute
+  '/strategy-execution': typeof StrategyExecutionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/business-strategy': typeof BusinessStrategyRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/connect-with-us': typeof ConnectWithUsRoute
+  '/market-research': typeof MarketResearchRoute
+  '/services': typeof ServicesRoute
+  '/strategy-execution': typeof StrategyExecutionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/business-strategy': typeof BusinessStrategyRoute
+  '/case-studies': typeof CaseStudiesRoute
+  '/connect-with-us': typeof ConnectWithUsRoute
+  '/market-research': typeof MarketResearchRoute
+  '/services': typeof ServicesRoute
+  '/strategy-execution': typeof StrategyExecutionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/business-strategy'
+    | '/case-studies'
+    | '/connect-with-us'
+    | '/market-research'
+    | '/services'
+    | '/strategy-execution'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about'
-  id: '__root__' | '/' | '/about'
+  to:
+    | '/'
+    | '/about'
+    | '/business-strategy'
+    | '/case-studies'
+    | '/connect-with-us'
+    | '/market-research'
+    | '/services'
+    | '/strategy-execution'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/business-strategy'
+    | '/case-studies'
+    | '/connect-with-us'
+    | '/market-research'
+    | '/services'
+    | '/strategy-execution'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BusinessStrategyRoute: typeof BusinessStrategyRoute
+  CaseStudiesRoute: typeof CaseStudiesRoute
+  ConnectWithUsRoute: typeof ConnectWithUsRoute
+  MarketResearchRoute: typeof MarketResearchRoute
+  ServicesRoute: typeof ServicesRoute
+  StrategyExecutionRoute: typeof StrategyExecutionRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +150,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AboutRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/business-strategy': {
+      id: '/business-strategy'
+      path: '/business-strategy'
+      fullPath: '/business-strategy'
+      preLoaderRoute: typeof BusinessStrategyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/case-studies': {
+      id: '/case-studies'
+      path: '/case-studies'
+      fullPath: '/case-studies'
+      preLoaderRoute: typeof CaseStudiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/connect-with-us': {
+      id: '/connect-with-us'
+      path: '/connect-with-us'
+      fullPath: '/connect-with-us'
+      preLoaderRoute: typeof ConnectWithUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/market-research': {
+      id: '/market-research'
+      path: '/market-research'
+      fullPath: '/market-research'
+      preLoaderRoute: typeof MarketResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/services': {
+      id: '/services'
+      path: '/services'
+      fullPath: '/services'
+      preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/strategy-execution': {
+      id: '/strategy-execution'
+      path: '/strategy-execution'
+      fullPath: '/strategy-execution'
+      preLoaderRoute: typeof StrategyExecutionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BusinessStrategyRoute: BusinessStrategyRoute,
+  CaseStudiesRoute: CaseStudiesRoute,
+  ConnectWithUsRoute: ConnectWithUsRoute,
+  MarketResearchRoute: MarketResearchRoute,
+  ServicesRoute: ServicesRoute,
+  StrategyExecutionRoute: StrategyExecutionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
