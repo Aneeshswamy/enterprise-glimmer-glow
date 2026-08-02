@@ -11,10 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as BrandStrategyRouteImport } from './routes/brand-strategy'
 import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ConnectWithUsRouteImport } from './routes/connect-with-us'
 import { Route as MarketResearchRouteImport } from './routes/market-research'
+import { Route as QualitativeResearchRouteImport } from './routes/qualitative-research'
+import { Route as QuantitativeResearchRouteImport } from './routes/quantitative-research'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as StrategyExecutionRouteImport } from './routes/strategy-execution'
 
@@ -26,6 +29,11 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrandStrategyRoute = BrandStrategyRouteImport.update({
+  id: '/brand-strategy',
+  path: '/brand-strategy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BusinessStrategyRoute = BusinessStrategyRouteImport.update({
@@ -48,6 +56,16 @@ const MarketResearchRoute = MarketResearchRouteImport.update({
   path: '/market-research',
   getParentRoute: () => rootRouteImport,
 } as any)
+const QualitativeResearchRoute = QualitativeResearchRouteImport.update({
+  id: '/qualitative-research',
+  path: '/qualitative-research',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuantitativeResearchRoute = QuantitativeResearchRouteImport.update({
+  id: '/quantitative-research',
+  path: '/quantitative-research',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
@@ -62,20 +80,26 @@ const StrategyExecutionRoute = StrategyExecutionRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/brand-strategy': typeof BrandStrategyRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
   '/market-research': typeof MarketResearchRoute
+  '/qualitative-research': typeof QualitativeResearchRoute
+  '/quantitative-research': typeof QuantitativeResearchRoute
   '/services': typeof ServicesRoute
   '/strategy-execution': typeof StrategyExecutionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/brand-strategy': typeof BrandStrategyRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
   '/market-research': typeof MarketResearchRoute
+  '/qualitative-research': typeof QualitativeResearchRoute
+  '/quantitative-research': typeof QuantitativeResearchRoute
   '/services': typeof ServicesRoute
   '/strategy-execution': typeof StrategyExecutionRoute
 }
@@ -83,10 +107,13 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/brand-strategy': typeof BrandStrategyRoute
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
   '/market-research': typeof MarketResearchRoute
+  '/qualitative-research': typeof QualitativeResearchRoute
+  '/quantitative-research': typeof QuantitativeResearchRoute
   '/services': typeof ServicesRoute
   '/strategy-execution': typeof StrategyExecutionRoute
 }
@@ -95,30 +122,39 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/brand-strategy'
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
     | '/market-research'
+    | '/qualitative-research'
+    | '/quantitative-research'
     | '/services'
     | '/strategy-execution'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
+    | '/brand-strategy'
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
     | '/market-research'
+    | '/qualitative-research'
+    | '/quantitative-research'
     | '/services'
     | '/strategy-execution'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/brand-strategy'
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
     | '/market-research'
+    | '/qualitative-research'
+    | '/quantitative-research'
     | '/services'
     | '/strategy-execution'
   fileRoutesById: FileRoutesById
@@ -126,10 +162,13 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BrandStrategyRoute: typeof BrandStrategyRoute
   BusinessStrategyRoute: typeof BusinessStrategyRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   ConnectWithUsRoute: typeof ConnectWithUsRoute
   MarketResearchRoute: typeof MarketResearchRoute
+  QualitativeResearchRoute: typeof QualitativeResearchRoute
+  QuantitativeResearchRoute: typeof QuantitativeResearchRoute
   ServicesRoute: typeof ServicesRoute
   StrategyExecutionRoute: typeof StrategyExecutionRoute
 }
@@ -148,6 +187,13 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brand-strategy': {
+      id: '/brand-strategy'
+      path: '/brand-strategy'
+      fullPath: '/brand-strategy'
+      preLoaderRoute: typeof BrandStrategyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/business-strategy': {
@@ -178,6 +224,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MarketResearchRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/qualitative-research': {
+      id: '/qualitative-research'
+      path: '/qualitative-research'
+      fullPath: '/qualitative-research'
+      preLoaderRoute: typeof QualitativeResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quantitative-research': {
+      id: '/quantitative-research'
+      path: '/quantitative-research'
+      fullPath: '/quantitative-research'
+      preLoaderRoute: typeof QuantitativeResearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/services': {
       id: '/services'
       path: '/services'
@@ -198,10 +258,13 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BrandStrategyRoute: BrandStrategyRoute,
   BusinessStrategyRoute: BusinessStrategyRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   ConnectWithUsRoute: ConnectWithUsRoute,
   MarketResearchRoute: MarketResearchRoute,
+  QualitativeResearchRoute: QualitativeResearchRoute,
+  QuantitativeResearchRoute: QuantitativeResearchRoute,
   ServicesRoute: ServicesRoute,
   StrategyExecutionRoute: StrategyExecutionRoute,
 }
