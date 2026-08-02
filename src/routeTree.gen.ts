@@ -15,6 +15,8 @@ import { Route as BrandStrategyRouteImport } from './routes/brand-strategy'
 import { Route as BusinessStrategyRouteImport } from './routes/business-strategy'
 import { Route as CaseStudiesRouteImport } from './routes/case-studies'
 import { Route as ConnectWithUsRouteImport } from './routes/connect-with-us'
+import { Route as FinancialAnalysisRouteImport } from './routes/financial-analysis'
+import { Route as GtmPlanRouteImport } from './routes/gtm-plan'
 import { Route as MarketResearchRouteImport } from './routes/market-research'
 import { Route as QualitativeResearchRouteImport } from './routes/qualitative-research'
 import { Route as QuantitativeResearchRouteImport } from './routes/quantitative-research'
@@ -51,6 +53,16 @@ const ConnectWithUsRoute = ConnectWithUsRouteImport.update({
   path: '/connect-with-us',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FinancialAnalysisRoute = FinancialAnalysisRouteImport.update({
+  id: '/financial-analysis',
+  path: '/financial-analysis',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GtmPlanRoute = GtmPlanRouteImport.update({
+  id: '/gtm-plan',
+  path: '/gtm-plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MarketResearchRoute = MarketResearchRouteImport.update({
   id: '/market-research',
   path: '/market-research',
@@ -84,6 +96,8 @@ export interface FileRoutesByFullPath {
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
+  '/financial-analysis': typeof FinancialAnalysisRoute
+  '/gtm-plan': typeof GtmPlanRoute
   '/market-research': typeof MarketResearchRoute
   '/qualitative-research': typeof QualitativeResearchRoute
   '/quantitative-research': typeof QuantitativeResearchRoute
@@ -97,6 +111,8 @@ export interface FileRoutesByTo {
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
+  '/financial-analysis': typeof FinancialAnalysisRoute
+  '/gtm-plan': typeof GtmPlanRoute
   '/market-research': typeof MarketResearchRoute
   '/qualitative-research': typeof QualitativeResearchRoute
   '/quantitative-research': typeof QuantitativeResearchRoute
@@ -111,6 +127,8 @@ export interface FileRoutesById {
   '/business-strategy': typeof BusinessStrategyRoute
   '/case-studies': typeof CaseStudiesRoute
   '/connect-with-us': typeof ConnectWithUsRoute
+  '/financial-analysis': typeof FinancialAnalysisRoute
+  '/gtm-plan': typeof GtmPlanRoute
   '/market-research': typeof MarketResearchRoute
   '/qualitative-research': typeof QualitativeResearchRoute
   '/quantitative-research': typeof QuantitativeResearchRoute
@@ -126,6 +144,8 @@ export interface FileRouteTypes {
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
+    | '/financial-analysis'
+    | '/gtm-plan'
     | '/market-research'
     | '/qualitative-research'
     | '/quantitative-research'
@@ -139,6 +159,8 @@ export interface FileRouteTypes {
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
+    | '/financial-analysis'
+    | '/gtm-plan'
     | '/market-research'
     | '/qualitative-research'
     | '/quantitative-research'
@@ -152,6 +174,8 @@ export interface FileRouteTypes {
     | '/business-strategy'
     | '/case-studies'
     | '/connect-with-us'
+    | '/financial-analysis'
+    | '/gtm-plan'
     | '/market-research'
     | '/qualitative-research'
     | '/quantitative-research'
@@ -166,6 +190,8 @@ export interface RootRouteChildren {
   BusinessStrategyRoute: typeof BusinessStrategyRoute
   CaseStudiesRoute: typeof CaseStudiesRoute
   ConnectWithUsRoute: typeof ConnectWithUsRoute
+  FinancialAnalysisRoute: typeof FinancialAnalysisRoute
+  GtmPlanRoute: typeof GtmPlanRoute
   MarketResearchRoute: typeof MarketResearchRoute
   QualitativeResearchRoute: typeof QualitativeResearchRoute
   QuantitativeResearchRoute: typeof QuantitativeResearchRoute
@@ -217,6 +243,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConnectWithUsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/financial-analysis': {
+      id: '/financial-analysis'
+      path: '/financial-analysis'
+      fullPath: '/financial-analysis'
+      preLoaderRoute: typeof FinancialAnalysisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gtm-plan': {
+      id: '/gtm-plan'
+      path: '/gtm-plan'
+      fullPath: '/gtm-plan'
+      preLoaderRoute: typeof GtmPlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/market-research': {
       id: '/market-research'
       path: '/market-research'
@@ -262,6 +302,8 @@ const rootRouteChildren: RootRouteChildren = {
   BusinessStrategyRoute: BusinessStrategyRoute,
   CaseStudiesRoute: CaseStudiesRoute,
   ConnectWithUsRoute: ConnectWithUsRoute,
+  FinancialAnalysisRoute: FinancialAnalysisRoute,
+  GtmPlanRoute: GtmPlanRoute,
   MarketResearchRoute: MarketResearchRoute,
   QualitativeResearchRoute: QualitativeResearchRoute,
   QuantitativeResearchRoute: QuantitativeResearchRoute,
