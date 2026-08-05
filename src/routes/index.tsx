@@ -7,7 +7,7 @@ import heroImage from "@/assets/hero-boardroom.jpg";
 import insightsImage from "@/assets/service-insights.jpg";
 import strategyImage from "@/assets/service-strategy.jpg";
 import executionImage from "@/assets/service-execution.jpg";
-import handshakeImage from "@/assets/service-execution.jpg";
+import handshakeImage from "@/assets/insight-handshake.jpg";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
 import { GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
 
