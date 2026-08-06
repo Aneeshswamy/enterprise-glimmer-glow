@@ -61,13 +61,14 @@ function ThemeToggle() {
 
 function Wordmark() {
   return (
-    <Link to="/" className="group flex flex-col leading-none">
-      <span className="font-display text-2xl tracking-[0.16em] text-ink-foreground">
-        INSTR<span className="text-gold">E</span>X
-      </span>
-      <span className="mt-1 font-sans text-[0.5rem] tracking-[0.3em] text-ink-foreground/50 uppercase">
-        Insights to Impact
-      </span>
+    <Link to="/" className="group flex items-center leading-none">
+      <img
+        src={logoImage}
+        alt="Instrex — Insights I Strategy I Execution"
+        width={1568}
+        height={654}
+        className="h-10 w-auto brightness-0 invert md:h-11 dark:brightness-100 dark:invert-0"
+      />
     </Link>
   );
 }
