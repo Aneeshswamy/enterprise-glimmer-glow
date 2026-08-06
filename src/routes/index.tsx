@@ -160,11 +160,11 @@ function Home() {
             <div className="relative">
               <div className="absolute -top-4 -right-4 h-full w-full border border-gold/30" />
               <img
-                src={handshakeImage}
-                alt="Consulting, Market Research, Strategy, Business"
+                src={bridgeImage}
+                alt="A sleek bridge connecting two cliffs"
                 loading="lazy"
-                width={1024}
-                height={1024}
+                width={1440}
+                height={810}
                 className="relative aspect-[4/5] w-full object-cover"
               />
             </div>
