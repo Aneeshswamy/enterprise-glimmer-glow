@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import logoImage from "@/assets/instrex-logo.png";
+
 type NavItem = { label: string; to: string; children?: { label: string; to: string }[] };
 
 export const NAV: NavItem[] = [
@@ -62,13 +64,15 @@ function ThemeToggle() {
 function Wordmark() {
   return (
     <Link to="/" className="group flex items-center leading-none">
-      <img
-        src={logoImage}
-        alt="Instrex — Insights I Strategy I Execution"
-        width={1568}
-        height={654}
-        className="h-10 w-auto brightness-0 invert md:h-11 dark:brightness-100 dark:invert-0"
-      />
+      <span className="rounded-md bg-white px-3 py-2 shadow-[var(--shadow-lift)] transition-transform duration-500 group-hover:scale-[1.02]">
+        <img
+          src={logoImage}
+          alt="Instrex — Insights I Strategy I Execution"
+          width={1568}
+          height={654}
+          className="h-7 w-auto md:h-8"
+        />
+      </span>
     </Link>
   );
 }
