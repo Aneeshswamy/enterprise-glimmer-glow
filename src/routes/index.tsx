@@ -1,13 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import heroImage from "@/assets/hero-boardroom.jpg";
+import heroSlide2 from "@/assets/case-quant.jpg";
+import heroSlide3 from "@/assets/case-brand.jpg";
+import heroSlide4 from "@/assets/case-gtm.jpg";
 import insightsImage from "@/assets/service-insights.jpg";
 import strategyImage from "@/assets/service-strategy.jpg";
 import executionImage from "@/assets/service-execution.jpg";
-import handshakeImage from "@/assets/insight-handshake.jpg";
+import bridgeImage from "@/assets/bridge-insight-impact.jpg";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
 import { GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
 
@@ -31,23 +34,57 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
+const heroSlides = [
+  { src: heroImage, alt: "Instrex consulting boardroom overlooking a city skyline" },
+  { src: heroSlide2, alt: "Instrex consulting research banner" },
+  { src: heroSlide3, alt: "Instrex brand strategy banner" },
+  { src: heroSlide4, alt: "Instrex go-to-market banner" },
+];
+
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = window.setInterval(() => setIndex((i) => (i + 1) % heroSlides.length), 5500);
+    return () => window.clearInterval(id);
+  }, []);
 
   return (
     <div ref={ref} className="relative isolate min-h-screen overflow-hidden bg-ink">
-      <motion.img
-        src={heroImage}
-        alt="Instrex consulting boardroom overlooking a city skyline"
-        width={1920}
-        height={1088}
-        style={{ y }}
-        className="absolute inset-0 -z-10 h-[115%] w-full object-cover opacity-55"
-      />
+      <motion.div style={{ y }} className="absolute inset-0 -z-10 h-[115%] w-full">
+        <AnimatePresence initial={false}>
+          <motion.img
+            key={index}
+            src={heroSlides[index]?.src}
+            alt={heroSlides[index]?.alt ?? ""}
+            width={1920}
+            height={1088}
+            initial={{ opacity: 0, x: "6%", scale: 1.06 }}
+            animate={{ opacity: 0.55, x: "0%", scale: 1 }}
+            exit={{ opacity: 0, x: "-6%", scale: 1.02 }}
+            transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        </AnimatePresence>
+      </motion.div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/85 via-ink/60 to-ink" />
+      <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-3">
+        {heroSlides.map((slide, i) => (
+          <button
+            key={slide.alt}
+            type="button"
+            aria-label={`Show banner ${i + 1}`}
+            onClick={() => setIndex(i)}
+            className={`h-1 rounded-full transition-all duration-500 ${
+              i === index ? "w-10 bg-gold" : "w-5 bg-ink-foreground/30"
+            }`}
+          />
+        ))}
+      </div>
       <motion.div
         style={{ opacity }}
         className="mx-auto flex min-h-screen w-full max-w-6xl flex-col justify-center px-6 py-40 text-ink-foreground"
@@ -157,11 +194,11 @@ function Home() {
             <div className="relative">
               <div className="absolute -top-4 -right-4 h-full w-full border border-gold/30" />
               <img
-                src={handshakeImage}
-                alt="Consulting, Market Research, Strategy, Business"
+                src={bridgeImage}
+                alt="A sleek bridge connecting two cliffs"
                 loading="lazy"
-                width={1024}
-                height={1024}
+                width={1440}
+                height={810}
                 className="relative aspect-[4/5] w-full object-cover"
               />
             </div>

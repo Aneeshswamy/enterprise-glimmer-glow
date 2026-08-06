@@ -3,6 +3,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import logoImage from "@/assets/instrex-logo.png";
+
 type NavItem = { label: string; to: string; children?: { label: string; to: string }[] };
 
 export const NAV: NavItem[] = [
@@ -61,12 +63,15 @@ function ThemeToggle() {
 
 function Wordmark() {
   return (
-    <Link to="/" className="group flex flex-col leading-none">
-      <span className="font-display text-2xl tracking-[0.16em] text-ink-foreground">
-        INSTR<span className="text-gold">E</span>X
-      </span>
-      <span className="mt-1 font-sans text-[0.5rem] tracking-[0.3em] text-ink-foreground/50 uppercase">
-        Insights to Impact
+    <Link to="/" className="group flex items-center leading-none">
+      <span className="rounded-md bg-white px-3 py-2 shadow-[var(--shadow-lift)] transition-transform duration-500 group-hover:scale-[1.02]">
+        <img
+          src={logoImage}
+          alt="Instrex — Insights I Strategy I Execution"
+          width={1568}
+          height={654}
+          className="h-7 w-auto md:h-8"
+        />
       </span>
     </Link>
   );
@@ -186,9 +191,16 @@ export function SiteFooter() {
     <footer className="bg-ink px-6 py-16 text-ink-foreground">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-display text-2xl tracking-[0.16em]">
-            INSTR<span className="text-gold">E</span>X
-          </p>
+          <span className="inline-block rounded-md bg-white px-4 py-3">
+            <img
+              src={logoImage}
+              alt="Instrex — Insights I Strategy I Execution"
+              width={1568}
+              height={654}
+              loading="lazy"
+              className="h-9 w-auto"
+            />
+          </span>
           <span className="gold-rule mt-5" />
         </div>
         <div className="space-y-2 font-sans text-sm text-ink-foreground/70">
