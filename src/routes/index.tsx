@@ -1,13 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import heroImage from "@/assets/hero-boardroom.jpg";
+import heroSlide2 from "@/assets/case-quant.jpg";
+import heroSlide3 from "@/assets/case-brand.jpg";
+import heroSlide4 from "@/assets/case-gtm.jpg";
 import insightsImage from "@/assets/service-insights.jpg";
 import strategyImage from "@/assets/service-strategy.jpg";
 import executionImage from "@/assets/service-execution.jpg";
-import handshakeImage from "@/assets/insight-handshake.jpg";
+import bridgeImage from "@/assets/bridge-insight-impact.jpg";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
 import { GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
 
