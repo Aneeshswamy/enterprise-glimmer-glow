@@ -191,9 +191,16 @@ export function SiteFooter() {
     <footer className="bg-ink px-6 py-16 text-ink-foreground">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="font-display text-2xl tracking-[0.16em]">
-            INSTR<span className="text-gold">E</span>X
-          </p>
+          <span className="inline-block rounded-md bg-white px-4 py-3">
+            <img
+              src={logoImage}
+              alt="Instrex — Insights I Strategy I Execution"
+              width={1568}
+              height={654}
+              loading="lazy"
+              className="h-9 w-auto"
+            />
+          </span>
           <span className="gold-rule mt-5" />
         </div>
         <div className="space-y-2 font-sans text-sm text-ink-foreground/70">
