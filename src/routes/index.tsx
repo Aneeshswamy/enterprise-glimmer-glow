@@ -59,8 +59,8 @@ function Hero() {
         <AnimatePresence initial={false}>
           <motion.img
             key={index}
-            src={heroSlides[index].src}
-            alt={heroSlides[index].alt}
+            src={heroSlides[index]?.src}
+            alt={heroSlides[index]?.alt ?? ""}
             width={1920}
             height={1088}
             initial={{ opacity: 0, x: "6%", scale: 1.06 }}
