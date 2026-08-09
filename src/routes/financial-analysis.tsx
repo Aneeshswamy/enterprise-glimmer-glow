@@ -2,14 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 
 import financialImage from "@/assets/case-financial.jpg";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
-import {
-  GoldList,
-  NumberList,
-  PageHeader,
-  Panel,
-  Section,
-  SectionTitle,
-} from "@/components/site/Layout";
+import { GoldList, PageHeader, Panel, Section, SectionTitle } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/financial-analysis")({
   head: () => ({
@@ -18,7 +11,7 @@ export const Route = createFileRoute("/financial-analysis")({
       {
         name: "description",
         content:
-          "Financial Analysis - Make vs. Buy Analysis for CNG Cylinder Manufacturing in India, including CAPEX, OPEX, unit economics, and sensitivity analysis.",
+          "Make vs. Buy Decision for CNG Cylinder Manufacturing — capital and operating costs, unit economics, and sensitivity analysis for an automotive OEM.",
       },
       {
         property: "og:title",
@@ -27,7 +20,7 @@ export const Route = createFileRoute("/financial-analysis")({
       {
         property: "og:description",
         content:
-          "A staged approach that balanced short-term feasibility with long-term competitiveness for an automotive OEM.",
+          "A practical, low-risk way into the market without a big upfront bet on manufacturing.",
       },
     ],
   }),
@@ -39,247 +32,145 @@ function FinancialAnalysis() {
     <>
       <PageHeader
         kicker="Financial Analysis"
-        title="Financial Analysis - Make vs. Buy Analysis for CNG Cylinder Manufacturing in India"
+        title="Make vs. Buy Decision for CNG Cylinder Manufacturing"
         image={financialImage}
         imageAlt="Industrial manufacturing facility for CNG cylinders"
       />
 
       <Section>
-        <div className="grid gap-14 md:grid-cols-2 md:items-start">
-          <Reveal className="space-y-6">
-            <SectionTitle className="text-2xl md:text-3xl">Context and Objectives</SectionTitle>
-            <span className="gold-rule" />
-            <p className="prose-instrex">
-              A leading automotive OEM was required to supply on-board CNG cylinders for a CNG
-              vehicle. It wanted to determine the most cost-effective approach for sourcing on-board
-              CNG cylinders. The key question was whether it would be more viable to set up a
-              manufacturing facility in India or import finished cylinders from China.
-            </p>
-            <p className="prose-instrex">
-              The decision needed to align with a pre-defined target selling price, making cost
-              efficiency and unit economics central to the analysis.
-            </p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <Panel title="Study Objectives:">
-              <NumberList
-                items={[
-                  "Assess the financial viability of manufacturing CNG cylinders in India.",
-                  "Conduct a Make vs. Buy (Import) analysis across different production volumes.",
-                  "Perform a sensitivity analysis to understand scale effects, breakeven points, and long-term profitability.",
-                ]}
-              />
-            </Panel>
-          </Reveal>
-        </div>
+        <Reveal className="max-w-3xl space-y-6">
+          <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
+          <span className="gold-rule" />
+          <p className="prose-instrex">
+            An automotive OEM needed to supply on-board CNG cylinders for its vehicles and had to
+            decide how to source them. Should it build a manufacturing plant in India, or import
+            finished cylinders from China? The decision had to work against a fixed target selling
+            price, so cost efficiency wasn’t optional, it was the whole question.
+          </p>
+          <p className="prose-instrex">
+            We needed to assess whether manufacturing in India made financial sense, compare that
+            against importing across different volumes, and understand how scale, breakeven, and
+            long-term margins would play out.
+          </p>
+        </Reveal>
       </Section>
 
       <Section tone="ink">
         <Reveal>
-          <SectionTitle>Approach and Methodology</SectionTitle>
+          <SectionTitle>What We Did</SectionTitle>
           <span className="gold-rule mt-8" />
+        </Reveal>
+        <Reveal delay={0.1} className="mt-8 max-w-3xl space-y-6">
+          <p className="prose-instrex">
+            We built a structured Make vs. Buy model comparing two scenarios at the same target
+            selling price: setting up a plant in India, or importing finished cylinders from China.
+          </p>
+          <p className="prose-instrex">
+            For the manufacturing option, we ran a full feasibility study covering machinery, layout,
+            power and utility needs, production yield and wastage, labour requirements, and regulatory
+            approvals like PESO and BIS. This gave us real cost numbers instead of theoretical
+            estimates.
+          </p>
+          <p className="prose-instrex">
+            We then built out the investment picture for both scenarios.
+          </p>
         </Reveal>
         <Stagger className="mt-12 grid gap-8 md:grid-cols-2">
           <StaggerItem>
-            <Panel title="1. Make-or-Buy Decision Framework" className="h-full">
-              <p className="prose-instrex">
-                Instrex applied a structured, data-driven Make vs. Buy framework that integrated
-                financial modeling with techno-commercial feasibility.
-              </p>
-              <p className="prose-instrex mt-5">The analysis compared two core scenarios:</p>
+            <Panel className="h-full">
               <GoldList
-                className="mt-3"
                 items={[
-                  "Scenario A: Setting up a greenfield manufacturing plant in India",
-                  "Scenario B: Importing finished CNG cylinders from China",
-                ]}
-              />
-              <p className="prose-instrex mt-5">
-                Both were evaluated at the same target realized selling price to ensure a fair,
-                like-for-like comparison.
-              </p>
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="2. Techno-Commercial Feasibility Assessment" className="h-full">
-              <p className="prose-instrex">
-                For the manufacturing scenario, a comprehensive feasibility study was conducted,
-                factoring in:
-              </p>
-              <GoldList
-                className="mt-3"
-                items={[
-                  "Machinery and layout requirements",
-                  "Power and utility consumption",
-                  "Production yield, wastage, and quality losses",
-                  "Labour and manpower deployment",
-                  "Regulatory and certification requirements (PESO, BIS)",
-                ]}
-              />
-              <p className="prose-instrex mt-5">
-                This approach ensured realistic production cost estimates rather than relying on
-                theoretical benchmarks.
-              </p>
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="3. Capital Expenditure (CAPEX) Estimation" className="h-full">
-              <p className="prose-instrex">
-                A detailed financial model was developed to calculate the one-time investment needed
-                to start operations.
-              </p>
-              <p className="prose-instrex mt-5">For Indian Manufacturing:</p>
-              <GoldList
-                className="mt-3"
-                items={[
-                  "Land acquisition",
-                  "Plant and building construction",
-                  "Machinery procurement",
-                  "Office setup and equipment",
-                  "Pre-launch manpower and overheads",
-                  "Working capital (equivalent to 3 months of operating costs)",
-                ]}
-              />
-              <p className="prose-instrex mt-5">For Imports from China:</p>
-              <GoldList
-                className="mt-3"
-                items={[
-                  "Licensing and regulatory approvals",
-                  "Minimal fixed infrastructure investment",
+                  "For manufacturing in India, that meant land, construction, machinery, office setup, pre-launch staffing, and three months of working capital.",
+                  "For imports, it was mostly licensing and approvals, with very little fixed infrastructure needed.",
                 ]}
               />
             </Panel>
           </StaggerItem>
           <StaggerItem>
-            <Panel title="4. Operational Expenditure (OPEX) Build-Up" className="h-full">
+            <Panel className="h-full">
               <p className="prose-instrex">
-                A bottom-up model was created to estimate recurring monthly costs.
+                On the operating side, we modeled variable costs like raw materials, consumables, and
+                utilities, and fixed costs like staff, admin, and compliance.
               </p>
-              <p className="prose-instrex mt-5">Variable Costs:</p>
-              <GoldList
-                className="mt-3"
-                items={["Raw materials", "Consumables", "Utilities and power"]}
-              />
-              <p className="prose-instrex mt-5">Fixed Costs:</p>
-              <GoldList
-                className="mt-3"
-                items={[
-                  "Staff and labour",
-                  "Administrative and plant overheads",
-                  "Compliance and regulatory expenses",
-                ]}
-              />
               <p className="prose-instrex mt-5">
-                For imports, all logistics-related expenses—freight, customs duty, port charges, and
-                handling—were fully accounted for.
-              </p>
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="5. Unit Economics and Cost of Production" className="h-full">
-              <p className="prose-instrex">
-                To determine the true cost per cylinder, both cash and non-cash expenses were
-                included.
-              </p>
-              <div className="mt-5 space-y-2">
-                <p className="prose-instrex">- Cash Costs: Raw materials + OPEX</p>
-                <p className="prose-instrex">- Non-Cash Costs: Depreciation</p>
-                <p className="prose-instrex">
-                  - Financial Costs: Interest on total capital employed (CAPEX + 3 months working
-                  capital)
-                </p>
-              </div>
-              <p className="prose-instrex mt-5">
-                This ensured the analysis reflected the complete financial impact of each business
-                model.
-              </p>
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="6. Revenue, Profitability, and Sensitivity Analysis" className="h-full">
-              <p className="prose-instrex">
-                Revenues were calculated using the customer’s target selling price.
-              </p>
-              <p className="prose-instrex mt-5">The profitability assessment included:</p>
-              <div className="mt-3 space-y-2">
-                <p className="prose-instrex">- Monthly and annual profit projections</p>
-                <p className="prose-instrex">- Breakeven and payback period analysis</p>
-              </div>
-              <p className="prose-instrex mt-5">
-                A scenario-based sensitivity analysis was run across multiple production volumes to
-                evaluate:
-              </p>
-              <div className="mt-3 space-y-2">
-                <p className="prose-instrex">- Economies of scale</p>
-                <p className="prose-instrex">- Movement in unit costs</p>
-              </div>
-              <p className="prose-instrex mt-5">
-                Minimum viable production volume for profitability.
+                For the import route, we also factored in freight, customs duty, port charges, and
+                handling.
               </p>
             </Panel>
           </StaggerItem>
         </Stagger>
+        <Reveal delay={0.2} className="mt-10 max-w-3xl">
+          <p className="prose-instrex">To get the true cost per cylinder, we included:</p>
+          <GoldList
+            className="mt-4"
+            items={[
+              "cash costs (materials and operations),",
+              "non-cash costs (depreciation), and",
+              "financial costs (interest on total capital employed).",
+            ]}
+          />
+          <p className="prose-instrex mt-6">
+            Then we ran profitability and sensitivity analysis across different production volumes to
+            see how unit costs moved with scale, and what volume was actually needed to break even.
+          </p>
+        </Reveal>
+      </Section>
+
+      <Section>
+        <Reveal>
+          <SectionTitle>What We Found</SectionTitle>
+          <span className="gold-rule mt-8" />
+        </Reveal>
+        <Reveal delay={0.1} className="mt-8 max-w-3xl space-y-6">
+          <p className="prose-instrex">
+            Manufacturing in India from day one wasn’t financially viable. The learning curve alone,
+            getting to regulatory compliance and manufacturing precision, could take up to a year.
+          </p>
+          <p className="prose-instrex">
+            On top of that, capital investment and fixed overheads were high, unit economics were poor
+            at low volumes, and profitability would stay low or negative in the early years even at
+            the target price.
+          </p>
+        </Reveal>
       </Section>
 
       <Section tone="muted">
         <Reveal>
-          <SectionTitle>Conclusion and Recommendations</SectionTitle>
+          <SectionTitle>What We Recommended</SectionTitle>
           <span className="gold-rule mt-8" />
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          <Reveal delay={0.1}>
-            <Panel title="Key Insights" className="h-full">
+        <Reveal delay={0.1} className="mt-8">
+          <p className="prose-instrex">A two-stage approach.</p>
+        </Reveal>
+        <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <Reveal delay={0.15}>
+            <Panel className="h-full">
               <p className="prose-instrex">
-                The study concluded that manufacturing CNG cylinders in India from day one would not
-                be financially viable, primarily due to:
+                Stage one: import and stabilize. Bring in cylinders from certified Chinese suppliers,
+                get PESO certification through one or two partners, start supplying the OEM with
+                minimal upfront investment, and build up operational and market experience.
               </p>
-              <GoldList
-                className="mt-4"
-                items={[
-                  "A steep operational learning curve — achieving regulatory compliance and manufacturing precision could take up to a year",
-                  "High capital investment and fixed overheads",
-                  "Unfavourable unit economics at lower volumes",
-                  "Low or negative profitability in the initial years, even at target prices",
-                ]}
-              />
             </Panel>
           </Reveal>
-          <Reveal delay={0.2}>
-            <Panel title="Stage 1: Import and Stabilize" className="h-full">
-              <GoldList
-                items={[
-                  "Import finished CNG cylinders from certified Chinese suppliers",
-                  "Obtain PESO certification for 1–2 partners",
-                  "Begin supplying the OEM with minimal upfront investment",
-                  "Build operational experience and market credibility",
-                ]}
-              />
-            </Panel>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <Panel title="Stage 2: Transition to Local Manufacturing" className="h-full">
-              <GoldList
-                items={[
-                  "Once demand stabilizes and internal capabilities strengthen",
-                  "After establishing strong regulatory relationships (PESO, BIS)",
-                  "Gradually shift to local manufacturing to reduce dependence on imports and improve margins over time",
-                ]}
-              />
+          <Reveal delay={0.25}>
+            <Panel className="h-full">
+              <p className="prose-instrex">
+                Stage two: shift to local manufacturing once demand is stable, internal capabilities
+                are stronger, and regulatory relationships with PESO and BIS are established. This
+                reduces reliance on imports and improves margins over time.
+              </p>
             </Panel>
           </Reveal>
         </div>
-        <Reveal delay={0.15} className="mt-10">
-          <p className="kicker">Recommended Two-Stage Strategy</p>
-        </Reveal>
       </Section>
 
       <Section tone="ink">
         <Reveal className="max-w-3xl">
-          <SectionTitle>Outcome</SectionTitle>
+          <SectionTitle>The Result</SectionTitle>
           <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
-            This staged approach provided the OEM with a practical, low-risk entry strategy—balancing
-            short-term feasibility with long-term competitiveness.
+            The OEM got a practical, low-risk way into the market, one that didn’t require a big
+            upfront bet on manufacturing before the business case was actually proven.
           </p>
         </Reveal>
       </Section>

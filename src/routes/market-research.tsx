@@ -18,7 +18,7 @@ export const Route = createFileRoute("/market-research")({
       {
         property: "og:description",
         content:
-          "Qualitative Research I Quantitative Research I AI Tools-Based Research I Secondary research",
+          "Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary Research",
       },
     ],
   }),
@@ -30,37 +30,38 @@ const blocks = [
     icon: Users,
     title: "Consumer Insights",
     items: [
-      "Understand customer needs, habits, and buying behaviors.",
-      "Measure brand strength and perception.",
-      "Evaluate product performance and pricing strategies.",
-      "Develop and test creative ideas for advertising and communication.",
+      "Understand customer needs, habits, and buying behaviors",
+      "Measure brand strength and perception",
+      "Evaluate product performance and pricing strategies",
+      "Develop and test creative ideas for advertising and communication",
+      "Category-specific research for FMCG, cosmetics, and fashion brands entering new markets or launching new products",
     ],
   },
   {
     icon: Store,
     title: "Retail and Channel Insights",
     items: [
-      "Identify and understand high-value customer segments.",
-      "Optimize channel strategies for better reach and efficiency.",
-      "Gain shopper insights and develop detailed store-level profiles.",
+      "Identify and understand high-value customer segments",
+      "Optimize channel strategies for better reach and efficiency",
+      "Gain shopper insights and develop detailed store-level profiles",
     ],
   },
   {
     icon: Building2,
     title: "Business and B2B Research",
     items: [
-      "Analyze market size and forecast future growth trends.",
-      "Understand business buyer needs and key vendor selection criteria.",
-      "Measure customer satisfaction and loyalty levels.",
-      "Study customer buying cycles and decision-making behaviors.",
+      "Analyze market size and forecast future growth trends",
+      "Understand business buyer needs and key vendor selection criteria",
+      "Measure customer satisfaction and loyalty levels",
+      "Study customer buying cycles and decision-making behaviors",
     ],
   },
   {
     icon: BarChart3,
     title: "Competition Analysis",
     items: [
-      "Gain a clear understanding of competitors’ product strategies, marketing tactics, and operational practices.",
-      "Evaluate their benchmarks and identify weaknesses to uncover opportunities for competitive advantage.",
+      "Understand competitors’ product strategies, marketing tactics, and operational practices",
+      "Benchmark against competitors and identify gaps that reveal a competitive advantage",
     ],
   },
 ];
@@ -78,19 +79,20 @@ function MarketResearch() {
       <Section>
         <Reveal className="max-w-3xl space-y-6">
           <p className="prose-instrex">
-            Business success in today’s fast-changing markets depends on understanding your
-            customers, competitors, and channels better than anyone else.
+            Business success in fast-changing markets depends on understanding your customers,
+            competitors, and channels better than anyone else.
           </p>
           <p className="prose-instrex">
             At Instrex, we go beyond simple data collection. We deliver deep, actionable market
-            research and analysis that uncover growth opportunities, guide winning strategies, and
-            reduce business risks.a
+            research for foods and beverages, personal care and home care, fashion and lifestyle,
+            engineering and technology, and manufacturing companies across India, uncovering growth
+            opportunities and reducing business risk at every stage of decision-making.
           </p>
         </Reveal>
         <Reveal delay={0.12}>
           <h3 className="mt-14 font-sans text-base leading-relaxed font-semibold text-gold md:text-lg">
-            Qualitative Research I Quantitative Research I AI Tools-Based Research I Secondary
-            research
+            Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary
+            Research
           </h3>
         </Reveal>
       </Section>
@@ -117,6 +119,12 @@ function MarketResearch() {
             </StaggerItem>
           ))}
         </Stagger>
+        <Reveal delay={0.12}>
+          <h3 className="mt-16 font-sans text-base leading-relaxed font-semibold text-gold md:text-lg">
+            Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary
+            Research
+          </h3>
+        </Reveal>
       </Section>
     </>
   );

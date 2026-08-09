@@ -29,26 +29,30 @@ function About() {
     <>
       <PageHeader
         kicker="About"
-        title="Our Approach"
+        title="About Instrex"
         image={approachImage}
         imageAlt="Executive reviewing business data visualisations"
       />
 
       <Section>
-        <div className="grid gap-16 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+        <Reveal>
+          <SectionTitle>Our Approach</SectionTitle>
+          <span className="gold-rule mt-8" />
+        </Reveal>
+        <div className="mt-12 grid gap-16 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <Reveal className="space-y-6">
             <p className="prose-instrex">
-              Over the years, we’ve had the opportunity to work with both established enterprises
-              and agile start-ups across diverse industries. The most important lesson we’ve learned
-              from this experience is that sustainable business success is built on insight, not
-              instinct. Every strategic move should be guided by facts, data, and a clear
-              understanding of the market. We firmly believe that decisions grounded in information
-              and business science lead to stronger, more resilient organizations.
+              Over the years, we’ve worked with both established enterprises and agile start-ups
+              across industries in India, from FMCG and fashion to engineering and manufacturing. The
+              lesson that comes up again and again: sustainable business success is built on insight,
+              not instinct. Every strategic move should be guided by facts, data, and a clear
+              understanding of the market.
             </p>
             <p className="prose-instrex">
-              Whether it’s business planning, go-to-market strategy, brand development, market
-              research, or financial analysis, our goal has always been to help leaders uncover
-              opportunities, mitigate risks, and make confident, well-informed decisions.
+              As a market research and business strategy consulting firm, our goal has always been to
+              help leaders uncover opportunities, reduce risk, and make well-informed decisions,
+              whether the work is business planning, go-to-market strategy, brand development, market
+              research, or financial analysis.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -76,12 +80,13 @@ function About() {
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
           <p className="prose-instrex">
             Our team is a network of senior experts in Marketing, Sales, Finance, Supply Chain, IT,
-            and Operations. They have held leadership roles such as CXOs and business heads in
-            reputed organizations.
+            and Operations, most of whom have held CXO or business head roles in reputed
+            organizations.
           </p>
           <p className="prose-instrex">
-            Team members collaborate on projects based on the expertise required, bringing together
-            deep knowledge and global experience to deliver practical, high-impact solutions.
+            Team members are brought onto a project based on the expertise it needs, so clients get
+            direct access to relevant experience rather than a generalist team stretched across every
+            function.
           </p>
         </Reveal>
       </Section>
@@ -103,19 +108,17 @@ function About() {
           </Reveal>
           <Reveal delay={0.12} className="space-y-6">
             <p className="prose-instrex">
-              Ashutosh, Director and Senior Consultant at Instrex, leads the consulting practice.
-              Earlier in his career, he held senior positions in several notable organizations,
-              including Airtel, Kantar IMRB, Reliance, Globacom (Nigeria), Amway, and Vertebrand
-              Consulting. These experiences have enriched his global business perspective and
-              sharpened his strategic acumen.
+              Ashutosh leads the consulting practice at Instrex. Before starting Instrex, he held
+              senior roles at Airtel, Kantar IMRB, Reliance, Globacom in Nigeria, Amway, and
+              Vertebrand Consulting, working across telecom, market research, FMCG, and consulting.
             </p>
             <p className="prose-instrex">
-              An alumnus of IIM Kozhikode and Delhi University, Ashutosh holds an MBA and a B.Tech,
-              giving him a strong foundation in both managerial insight and technical understanding.
+              He holds an MBA from IIM Kozhikode and a B.Tech from Delhi University, giving him both
+              the managerial and technical grounding the work needs.
             </p>
             <p className="prose-instrex">
-              He is a trusted advisor to senior business leaders, transforming data into direction,
-              insight into impact, and strategy into tangible results
+              He works directly with senior business leaders, turning data into direction and
+              strategy into results they can measure.
             </p>
           </Reveal>
         </div>

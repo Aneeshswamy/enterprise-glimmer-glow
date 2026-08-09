@@ -41,6 +41,12 @@ const heroSlides = [
   { src: heroSlide4, alt: "Instrex go-to-market banner" },
 ];
 
+const heroPillars = [
+  { label: "INSIGHTS", text: "Market Research & Analysis" },
+  { label: "STRATEGY", text: "Business Growth Blueprint" },
+  { label: "EXECUTION", text: "Implementation & Funding Support" },
+];
+
 function Hero() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -94,12 +100,29 @@ function Hero() {
         </Reveal>
         <Reveal delay={0.12}>
           <h1 className="mt-8 max-w-5xl text-[2rem] leading-[1.18] font-normal sm:text-4xl md:text-[3.4rem] md:leading-[1.14]">
-            Insights - Market Research and Analysis I Strategy - Business Growth Blueprint I
-            Execution - Strategy Implementation Facilitation and Funding Support
+            From Insight to Impact
           </h1>
+        </Reveal>
+        <Reveal delay={0.18} className="mt-8 max-w-3xl space-y-4">
+          <p className="prose-instrex">
+            We turn market insights into growth plans, and plans into results.
+          </p>
+          <p className="prose-instrex">
+            A business growth consulting firm built to deliver measurable outcomes.
+          </p>
         </Reveal>
         <Reveal delay={0.24}>
           <span className="gold-rule mt-12" />
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+            {heroPillars.map((p) => (
+              <div key={p.label}>
+                <p className="font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase">
+                  {p.label}
+                </p>
+                <p className="prose-instrex mt-2">{p.text}</p>
+              </div>
+            ))}
+          </div>
           <div className="mt-10 flex flex-wrap gap-4">
             <Link
               to="/connect-with-us"
@@ -117,7 +140,7 @@ function Hero() {
 
 const serviceCards = [
   {
-    title: "Insights - Market Research And Analysis",
+    title: "Insights — Market Research and Analysis",
     image: insightsImage,
     to: "/market-research",
     bullets: [
@@ -128,28 +151,39 @@ const serviceCards = [
       "Competitor benchmarking and evaluation",
     ],
     footnote:
-      "Qualitative Research I Quantitative Research I AI Tools-Based Research I Secondary research",
+      "Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary Research",
   },
   {
-    title: "Strategy - Business Growth Blueprint",
+    title: "Strategy — Business Growth Blueprint",
     image: strategyImage,
     to: "/business-strategy",
     bullets: [
-      "Business modelling and growth blueprint for sustained value creation.",
+      "Business modelling and growth blueprint for sustained value creation",
       "Go to market strategy",
-      "Mid-term and long-term Financial Planning.",
+      "Mid-term and long-term financial planning",
+      "Market and financial feasibility for new ventures",
     ],
     sub: [
-      "- Product and pricing strategy",
-      "- Sales and distribution planning",
-      "- Brand strategy and marketing communication planning",
+      "Product and pricing strategy",
+      "Sales and distribution planning",
+      "Brand strategy and marketing communication planning",
     ],
   },
   {
-    title: "Execution- Strategy Implementation Facilitation & Funding Support",
+    title: "Execution — Strategy Implementation, Facilitation & Funding Support",
     image: executionImage,
     to: "/strategy-execution",
   },
+];
+
+const industries = [
+  "FMCG — Foods & Beverages",
+  "FMCG — Personal Care & Cosmetics",
+  "FMCG — Home Care",
+  "Fashion & Lifestyle",
+  "Engineering & Technology",
+  "Manufacturing",
+  "Consumer services",
 ];
 
 function Home() {
@@ -162,31 +196,31 @@ function Home() {
           <div>
             <Reveal>
               <Kicker>Instrex</Kicker>
-              <SectionTitle className="mt-6">From Insight to Impact</SectionTitle>
+              <SectionTitle className="mt-6">
+                Research and Growth Plans, Built Together.
+              </SectionTitle>
               <span className="gold-rule mt-8" />
             </Reveal>
             <Reveal delay={0.1} className="mt-10 space-y-6">
               <p className="prose-instrex">
-                At Instrex, we provide end-to-end solutions, from uncovering deep market insights
-                and shaping growth strategies to turning them into real, measurable outcomes.
+                At Instrex, we help FMCG (foods &amp; beverages, personal care, cosmetics, &amp; home
+                care), fashion, engineering &amp; technology, manufacturing, and consumer services
+                companies in India turn market insight into business growth. We connect research with
+                strategy so that decisions are backed by evidence, not guesswork.
               </p>
               <p className="prose-instrex">
-                What truly sets us apart is how we seamlessly connect market research with strategy.
-                In a consulting world where these often work in isolation, we bring them together to
-                ensure insights lead to clear, decisive action.
+                Most consulting firms treat research and strategy as separate services. We don’t.
+                Every recommendation we make is grounded in what we’ve actually found in the market,
+                and every research project we run is designed with a business decision in mind.
               </p>
               <p className="prose-instrex">
-                We don’t stop at recommendations. We work alongside our clients through execution,
-                ensuring every strategy moves off the slide deck and creates visible results on the
-                ground.
+                We stay involved through execution too. A strategy is only useful if it leaves the
+                slide deck, so we work alongside our clients to make sure it does.
               </p>
               <p className="prose-instrex">
-                With years of leadership experience across industries and new ventures, our team
-                helps organizations plan smarter, act faster, and grow stronger — with greater
-                clarity, precision, and efficiency.
-              </p>
-              <p className="prose-instrex">
-                At Instrex, we don’t just advise. We co-create the future of your business.
+                Our team has led businesses and built new ventures across industries. That experience
+                shapes how we advise: practical, specific, and grounded in what actually moves a
+                business forward.
               </p>
             </Reveal>
           </div>
@@ -248,13 +282,13 @@ function Home() {
                           Funding Support
                         </p>
                         <p className="prose-instrex mt-2 text-[0.95rem]">
-                          Connecting ambitious businesses with the right investors
+                          Connecting ambitious businesses with the right investors.
                         </p>
                         <GoldList
                           className="mt-3"
                           items={[
-                            "Creating Investor-ready pitch decks.",
-                            "Facilitating funding from our trusted investor network.",
+                            "Creating investor-ready pitch decks",
+                            "Facilitating funding through our trusted investor network",
                           ]}
                         />
                       </div>
@@ -286,6 +320,38 @@ function Home() {
             </StaggerItem>
           ))}
         </Stagger>
+      </Section>
+
+      <Section>
+        <Reveal>
+          <Kicker>Instrex</Kicker>
+          <SectionTitle className="mt-6">Industries We Serve</SectionTitle>
+          <span className="gold-rule mt-8" />
+        </Reveal>
+        <Reveal delay={0.1} className="mt-10 max-w-3xl">
+          <p className="prose-instrex">
+            We work across four core sectors: FMCG (foods, personal care, and home care), fashion and
+            lifestyle, engineering and technology, manufacturing, and consumer services. Each comes
+            with its own consumer behavior, channel structure, and growth challenges, and our research
+            and strategy work is built around that difference rather than a generic template.
+          </p>
+        </Reveal>
+        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {industries.map((industry) => (
+            <StaggerItem key={industry}>
+              <div className="glass lift rounded-lg px-6 py-5">
+                <p className="font-sans text-sm font-semibold">{industry}</p>
+              </div>
+            </StaggerItem>
+          ))}
+        </Stagger>
+      </Section>
+
+      <Section tone="ink">
+        <Reveal className="text-center">
+          <SectionTitle>Brands We’ve Worked With</SectionTitle>
+          <span className="gold-rule mx-auto mt-8" />
+        </Reveal>
       </Section>
 
       <Section tone="muted">
