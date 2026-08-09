@@ -17,7 +17,7 @@ export const Route = createFileRoute("/strategy-execution")({
       {
         property: "og:description",
         content:
-          "Strategy Implementation and Funding Support — plans that move beyond presentations and deliver real, on-ground results.",
+          "Strategy Implementation and Funding Support — a strategy is only useful once it leaves the slide deck.",
       },
     ],
   }),
@@ -29,33 +29,31 @@ function StrategyExecution() {
     <>
       <PageHeader
         kicker="Execution"
-        title="Strategy Implementation"
+        title="Strategy Execution"
         image={executionImage}
         imageAlt="Executives reviewing an implementation roadmap"
       />
 
       <Section>
-        <div className="grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-start">
+        <Reveal>
+          <SectionTitle>Strategy Implementation</SectionTitle>
+          <span className="gold-rule mt-8" />
+        </Reveal>
+        <div className="mt-12 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <Reveal className="space-y-6">
             <p className="prose-instrex">
               We convert strategic goals into clear, actionable plans with defined timelines,
-              responsibilities, and measurable outcomes.
+              responsibilities, and measurable outcomes. Every initiative includes milestone tracking,
+              so progress stays visible and accountable.
             </p>
             <p className="prose-instrex">
-              Every initiative is structured with milestone tracking to ensure accountability and
-              steady progress.
+              Execution is backed by our network of trusted specialist partners, including marketing
+              agencies, finance professionals, investment bankers, and other domain experts, brought
+              in exactly where they’re needed.
             </p>
             <p className="prose-instrex">
-              Execution is strengthened through our network of trusted specialist partners, including{" "}
-              <strong className="font-semibold text-foreground">
-                marketing agencies, finance professionals, investment bankers, and other domain
-                experts
-              </strong>
-              , bringing focused expertise exactly where it’s needed.
-            </p>
-            <p className="prose-instrex">
-              By combining strategic direction with hands-on implementation support, we ensure that
-              plans move beyond presentations and deliver real, on-ground results.
+              A strategy is only useful once it leaves the slide deck. That’s the standard we hold
+              execution to.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
@@ -83,18 +81,18 @@ function StrategyExecution() {
           <Reveal delay={0.1}>
             <Panel className="h-full">
               <p className="prose-instrex">
-                Instrex connects high-potential startups with early-stage funding through a trusted
-                network of HNI investors. We ensure a transparent and thorough due diligence process,
-                helping founders partner with the right investors for sustainable growth.
+                Instrex connects high-potential startups in India with early-stage funding through a
+                network of HNI investors. Every introduction goes through a transparent due diligence
+                process, so founders end up partnering with the right investors, not just any
+                investor.
               </p>
             </Panel>
           </Reveal>
           <Reveal delay={0.2}>
             <Panel className="h-full">
               <p className="prose-instrex">
-                Our team also helps startups craft powerful pitch decks that clearly showcase their
-                value proposition, market opportunity, and growth potential — backed by solid data
-                and business insight.
+                We also help startups build pitch decks that clearly show their value proposition,
+                market opportunity, and growth potential, backed by real data rather than assumptions.
               </p>
             </Panel>
           </Reveal>

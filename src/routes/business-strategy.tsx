@@ -11,13 +11,13 @@ export const Route = createFileRoute("/business-strategy")({
       {
         name: "description",
         content:
-          "Insight-driven Strategic Business Planning, Go To Market Strategy, Strategic Brand Identity, and Business And Financial Planning.",
+          "Insight-driven Business Strategy, Go To Market Strategy, Brand Strategy, Financial Planning, and Market and Financial Feasibility.",
       },
       { property: "og:title", content: "Business Strategy — Instrex Growth Blueprint" },
       {
         property: "og:description",
         content:
-          "Growth doesn’t happen by chance. It’s the result of in-depth market and customer understanding, smart planning, precise execution, and continuous refinement.",
+          "Growth in a competitive market comes from in-depth market and customer understanding, smart planning, precise execution, and continuous refinement.",
       },
     ],
   }),
@@ -47,13 +47,14 @@ function BusinessStrategy() {
       <Section>
         <Reveal className="max-w-3xl space-y-6">
           <p className="prose-instrex">
-            In a competitive environment, growth doesn’t happen by chance. It’s the result of
-            in-depth market and customer understanding, smart planning, precise execution, and
-            continuous refinement.
+            Growth in a competitive market comes from in-depth market and customer understanding,
+            smart planning, precise execution, and continuous refinement.
           </p>
           <p className="prose-instrex">
-            At Instrex, our Strategic Business Planning approach is built on deep insights and aligns
-            resources, priorities, and market opportunities to create measurable, long-term value.
+            At Instrex, our business strategy consulting approach is built on deep insights and aligns
+            resources, priorities, and market opportunities to create measurable, long-term value for
+            FMCG, fashion, lifestyle, engineering, technology, and manufacturing companies across
+            India.
           </p>
         </Reveal>
       </Section>
@@ -67,16 +68,15 @@ function BusinessStrategy() {
           <Reveal delay={0.1} className="space-y-6">
             <p className="prose-instrex">
               Many great business ideas struggle to gain traction, even with strong products or
-              services, due to weak go-to-market planning.
-            </p>
-            <p className="prose-instrex">
-              A product may be well-designed but misaligned with customer needs, poorly communicated,
-              incorrectly priced, or unavailable through the right channels.
+              services, due to weak go-to-market planning. A product may be well-designed but
+              misaligned with customer needs, poorly communicated, incorrectly priced, or unavailable
+              through the right channels.
             </p>
             <p className="prose-instrex">
               At Instrex, we use deep market and consumer insights to design a GTM framework based on
-              the 7P model , ensuring every element of your business works in sync to maximize growth
-              potential.
+              the 7P model, so every part of the business works in sync, whether you’re launching a
+              new FMCG product, entering the fashion and lifestyle space, or scaling an engineering,
+              technology or manufacturing business.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -102,52 +102,68 @@ function BusinessStrategy() {
 
       <Section>
         <Reveal>
-          <SectionTitle>Strategic Brand Identity</SectionTitle>
+          <SectionTitle>Brand Strategy</SectionTitle>
           <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
           <p className="prose-instrex">
             Strong brands succeed because they have a clear purpose, defined values, distinct
-            personality, and consistent positioning. They maintain uniformity in design and
-            communication across all touchpoints, building trust over time.
+            personality, and consistent positioning. They stay consistent in design and communication
+            across every touchpoint, and that consistency is what builds trust over time.
           </p>
           <p className="prose-instrex">
-            Instrex follows a structured and insight-driven approach to define these elements and
-            create a comprehensive Strategic Brand Identity.
-          </p>
-          <p className="prose-instrex">
-            This identity acts as a guiding framework for all design, communication, and marketing
-            activities.
+            Instrex follows a structured, insight-driven approach to brand strategy, one built on
+            market and consumer research rather than opinion. The result is a brand identity that acts
+            as a guiding framework for all design, communication, and marketing decisions.
           </p>
         </Reveal>
       </Section>
 
       <Section tone="muted">
         <Reveal>
-          <SectionTitle>Business And Financial Planning</SectionTitle>
+          <SectionTitle>Financial Planning</SectionTitle>
           <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:items-start">
           <Reveal delay={0.1}>
             <p className="prose-instrex">
-              Effective business and financial planning is vital for sustainable growth. It helps
-              organizations set clear goals, allocate resources efficiently, and anticipate
-              challenges early. With a structured plan, every decision is backed by financial insight
-              and aligned with long-term objectives — turning ambition into measurable results.
+              Good financial planning helps organizations set clear goals, allocate resources
+              efficiently, and anticipate challenges early. Every decision is backed by financial
+              insight and aligned with long-term objectives.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
-            <Panel title="Instrex’s structured planning framework supports:">
+            <Panel title="Instrex’s planning framework supports:">
               <GoldList
                 items={[
-                  "• Long-term and mid-term financial planning.",
-                  "• Financial feasibility analysis for new ventures.",
-                  "• Functional and operational planning.",
+                  "Long-term and mid-term financial planning",
+                  "Functional and operational planning",
                 ]}
               />
             </Panel>
           </Reveal>
         </div>
+      </Section>
+
+      <Section>
+        <Reveal>
+          <SectionTitle>Market and Financial Feasibility</SectionTitle>
+          <span className="gold-rule mt-8" />
+        </Reveal>
+        <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
+          <p className="prose-instrex">
+            Before committing to a new venture, product launch, or market entry, the real question is
+            whether it will work, commercially and financially.
+          </p>
+          <p className="prose-instrex">
+            Instrex combines market research with financial modeling to test that question properly.
+            We look at whether there’s real customer demand, how the numbers hold up, and what the
+            actual risks are, rather than relying on financial projections alone. This
+            market-and-financial approach is different from the purely technical or
+            capital-expenditure feasibility studies most firms offer, and it’s where our research
+            background makes the biggest difference.
+          </p>
+        </Reveal>
       </Section>
     </>
   );
