@@ -27,9 +27,13 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { title: "Market Research", to: "/market-research", image: insightsImage },
-  { title: "Business Strategy", to: "/business-strategy", image: strategyImage },
-  { title: "Strategy Execution", to: "/strategy-execution", image: executionImage },
+  { title: "Insights — Market Research and Analysis", to: "/market-research", image: insightsImage },
+  { title: "Strategy — Business Growth Blueprint", to: "/business-strategy", image: strategyImage },
+  {
+    title: "Execution — Strategy Implementation, Facilitation & Funding Support",
+    to: "/strategy-execution",
+    image: executionImage,
+  },
 ];
 
 function Services() {

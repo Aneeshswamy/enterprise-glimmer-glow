@@ -34,32 +34,31 @@ const cases = [
     label: "Quantitative Research",
     to: "/quantitative-research",
     image: quantImage,
-    title:
-      "Concept Testing and Go-to-Market Strategy for a Subscription-Based Senior Care Platform",
+    title: "Validating a Subscription Model for Senior Care",
   },
   {
     label: "Qualitative Research",
     to: "/qualitative-research",
     image: qualImage,
-    title: "Reviving Growth for a HoReCa F&B Solutions Company Through Strategic Alignment",
+    title: "Reviving Growth for a HoReCa F&B Solutions Company",
   },
   {
     label: "Brand Strategy",
     to: "/brand-strategy",
     image: brandImage,
-    title: "Strategic Brand Identity for a Premium Cosmetics Brand",
+    title: "Building a Premium Brand Identity for a Natural Cosmetics Brand",
   },
   {
-    label: "GTM Plan",
+    label: "Go-To-Market Strategy",
     to: "/gtm-plan",
     image: gtmImage,
-    title: "GTM Plan for a Subscription-Based Dairy Brand",
+    title: "Launching a Subscription-Based Dairy Brand in Tier-2 and Tier-3 India",
   },
   {
     label: "Financial Analysis",
     to: "/financial-analysis",
     image: financialImage,
-    title: "Financial Analysis - Make vs. Buy Analysis for CNG Cylinder Manufacturing in India",
+    title: "Make vs. Buy Decision for CNG Cylinder Manufacturing",
   },
 ];
 
