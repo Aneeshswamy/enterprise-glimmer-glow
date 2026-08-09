@@ -7,17 +7,17 @@ import { GoldList, PageHeader, Panel, Section, SectionTitle } from "@/components
 export const Route = createFileRoute("/brand-strategy")({
   head: () => ({
     meta: [
-      { title: "Brand Strategy Case Study — Premium Cosmetics | Instrex" },
+      { title: "Brand Strategy Case Study — Natural Cosmetics | Instrex" },
       {
         name: "description",
         content:
-          "Strategic Brand Identity for a Premium Cosmetics Brand, built on the Instrex 6-Dimension Brand Identity Model.",
+          "Building a Premium Brand Identity for a Natural Cosmetics Brand, built on the Instrex 6-Dimension Brand Identity Model.",
       },
-      { property: "og:title", content: "Brand Strategy Case Study — Premium Cosmetics | Instrex" },
+      { property: "og:title", content: "Brand Strategy Case Study — Natural Cosmetics | Instrex" },
       {
         property: "og:description",
         content:
-          "A distinct and credible premium–luxury brand identity rooted in natural authenticity.",
+          "A credible, premium brand identity that stayed rooted in its natural story.",
       },
     ],
   }),
@@ -25,29 +25,17 @@ export const Route = createFileRoute("/brand-strategy")({
 });
 
 const dimensions = [
+  { n: "Culture", d: "the brand’s belief system, origin story, and worldview" },
   {
-    n: "1. Culture",
-    d: "– Articulated the brand’s belief system, origin story, and worldview to root it in authenticity.",
+    n: "Reflection",
+    d: "who the ideal customer really is, beyond age and income, their aspirations and lifestyle",
   },
+  { n: "Competence", d: "the real strengths that back up a premium claim" },
+  { n: "Personality", d: "how the brand talks and behaves, its tone and attitude" },
+  { n: "Relationship", d: "how it connects with people, emotionally and practically" },
   {
-    n: "2. Reflection",
-    d: "– Defined the ideal customer beyond demographic, focusing on aspirations, attitudes, and lifestyle.",
-  },
-  {
-    n: "3. Competence",
-    d: "– Identified core strengths and expertise that credibly support a premium promise.",
-  },
-  {
-    n: "4. Personality",
-    d: "– Humanized the brand, defining its tone, attitude, and expressive style across touchpoints.",
-  },
-  {
-    n: "5. Relationship",
-    d: "– Outlined how the brand would emotionally and functionally connect with its consumers.",
-  },
-  {
-    n: "6. Self-Image",
-    d: "– Clarified how consumers see their ideal selves when engaging with the brand—a key driver for premium aspiration.",
+    n: "Self-Image",
+    d: "how people want to see themselves when they use it, which matters a lot for premium appeal",
   },
 ];
 
@@ -56,7 +44,7 @@ function BrandStrategy() {
     <>
       <PageHeader
         kicker="Brand Strategy"
-        title="Strategic Brand Identity for a Premium Cosmetics Brand"
+        title="Building a Premium Brand Identity for a Natural Cosmetics Brand"
         image={brandImage}
         imageAlt="Premium natural cosmetics product still life"
       />
@@ -64,34 +52,25 @@ function BrandStrategy() {
       <Section>
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
-            <SectionTitle className="text-2xl md:text-3xl">Context</SectionTitle>
+            <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
             <span className="gold-rule" />
             <p className="prose-instrex">
-              A new cosmetics brand built on natural and authentic principles wanted to enter the
-              market as a premium–luxury brand.
+              A new cosmetics brand built on natural, honest ingredients wanted to launch as premium
+              to luxury. The hard part was doing that without losing what made it credible in the
+              first place.
             </p>
             <p className="prose-instrex">
-              The challenge was to craft an identity that could justify premium pricing and appeal to
-              discerning consumers—without losing its natural and honest foundation.
-            </p>
-            <p className="prose-instrex">
-              The brand needed a strategic identity system to guide its launch and future growth, not
-              just a visual design exercise.
+              This wasn’t a logo and color palette job. The brand needed a strategic identity that
+              could justify premium pricing, appeal to consumers who actually know what they’re
+              buying, and still feel true to its natural roots.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <Panel title="Strategic Objective">
+            <Panel title="What We Did">
               <p className="prose-instrex">
-                To develop a clear, differentiated brand identity that:
+                We used our 6-Dimension Brand Identity Model to define the brand strategically before
+                any creative work started.
               </p>
-              <GoldList
-                className="mt-4"
-                items={[
-                  "Establishes a premium–luxury positioning from inception",
-                  "Resonates with quality-driven, conscious consumers",
-                  "Preserves the brand’s natural authenticity and credibility",
-                ]}
-              />
             </Panel>
           </Reveal>
         </div>
@@ -99,15 +78,8 @@ function BrandStrategy() {
 
       <Section tone="ink">
         <Reveal>
-          <SectionTitle>Approach: The 6-Dimension Brand Identity Model</SectionTitle>
+          <SectionTitle>The 6-Dimension Brand Identity Model</SectionTitle>
           <span className="gold-rule mt-8" />
-        </Reveal>
-        <Reveal delay={0.1} className="mt-8 max-w-3xl">
-          <p className="prose-instrex">
-            Instrex applied its proprietary 6-Dimension Brand Identity Model to define the brand
-            strategically before creative execution—ensuring clarity, consistency, and long-term
-            relevance.
-          </p>
         </Reveal>
         <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
           {dimensions.map((d) => (
@@ -128,37 +100,30 @@ function BrandStrategy() {
         </Reveal>
         <Reveal delay={0.1} className="mt-8">
           <p className="prose-instrex">
-            Insights from the six dimensions were distilled into three strategic brand pillars:
+            From these six dimensions, we built three foundations for the brand:
           </p>
         </Reveal>
         <Stagger className="mt-10 grid gap-8 md:grid-cols-3">
           <StaggerItem>
             <Panel title="Brand Essence" className="h-full">
               <p className="prose-instrex">
-                – The brand’s core purpose and guiding values, forming the foundation for
-                storytelling and decision-making.
+                its core purpose and values, the base for everything else
               </p>
             </Panel>
           </StaggerItem>
           <StaggerItem>
             <Panel title="Brand Positioning" className="h-full">
               <p className="prose-instrex">
-                – A precise articulation of the brand’s unique value proposition and its
-                differentiated space in the market.
+                the specific space it owns in the market and why
               </p>
             </Panel>
           </StaggerItem>
           <StaggerItem>
             <Panel title="Brand Physique" className="h-full">
-              <p className="prose-instrex">– The tangible expression of the brand, including:</p>
-              <GoldList
-                className="mt-4"
-                items={[
-                  "Visual identity (color palette, typography, imagery)",
-                  "Tone of voice and verbal expression",
-                  "Overall aesthetic aligned with premium and natural cues",
-                ]}
-              />
+              <p className="prose-instrex">
+                how it actually looks and sounds, colors, typography, imagery, tone of voice, all tied
+                to premium and natural cues
+              </p>
             </Panel>
           </StaggerItem>
         </Stagger>
@@ -167,35 +132,27 @@ function BrandStrategy() {
       <Section tone="muted">
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
-            <SectionTitle className="text-2xl md:text-3xl">
-              Deliverable: The Strategic Brand Identity Guidebook
-            </SectionTitle>
+            <SectionTitle className="text-2xl md:text-3xl">What We Delivered</SectionTitle>
             <span className="gold-rule" />
             <p className="prose-instrex">
-              The outcome was a comprehensive Brand Identity Guidebook that defined:
-            </p>
-            <GoldList
-              items={[
-                "Strategic intent and direction",
-                "Visual and verbal identity",
-                "Consistency standards for future brand applications",
-              ]}
-            />
-            <p className="prose-instrex">
-              This guidebook became the brand’s launch foundation—a single, governing reference for
-              all internal and external stakeholders.
+              A full Brand Identity Guidebook covering the strategic direction, the visual and verbal
+              identity, and the standards to keep everything consistent as the brand grows. This
+              became the single reference point for the launch team and everyone working on the brand
+              after.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <Panel title="Business Impact">
-              <p className="prose-instrex">The new identity system delivered clear strategic value by:</p>
+            <Panel title="The Impact">
+              <p className="prose-instrex">
+                The identity system shaped decisions well beyond marketing. It guided:
+              </p>
               <GoldList
                 className="mt-4"
                 items={[
-                  "Providing direction for product development and formulation choices",
-                  "Guiding marketing campaigns and partnerships aligned with the premium ethos",
-                  "Defining retail and experience design for both digital and physical touchpoints",
-                  "Establishing a consistent, premium brand presence from launch",
+                  "Product development and formulation choices",
+                  "Campaigns and partnership selection",
+                  "Retail and experience design, both online and in stores",
+                  "A consistent premium presence from day one",
                 ]}
               />
             </Panel>
@@ -205,16 +162,13 @@ function BrandStrategy() {
 
       <Section tone="ink">
         <Reveal className="max-w-3xl">
-          <SectionTitle>Outcome</SectionTitle>
+          <SectionTitle>The Result</SectionTitle>
           <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
-            The result was a distinct and credible premium–luxury brand identity rooted in natural
-            authenticity.
-          </p>
-          <p className="prose-instrex mt-5">
-            By grounding creativity in strategic clarity, the brand entered the market with a strong,
-            scalable foundation—capable of earning consumer trust, commanding premium value, and
-            sustaining long-term growth.
+            The brand launched with a credible, premium identity that stayed rooted in its natural
+            story. Because the creative work was grounded in real strategy first, the brand had
+            something solid to build on, not just a good-looking launch, but a foundation it could grow
+            with.
           </p>
         </Reveal>
       </Section>

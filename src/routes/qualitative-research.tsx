@@ -11,7 +11,7 @@ export const Route = createFileRoute("/qualitative-research")({
       {
         name: "description",
         content:
-          "Reviving Growth for a HoReCa F&B Solutions Company Through Strategic Alignment — a 360° qualitative study by Instrex.",
+          "Reviving Growth for a HoReCa F&B Solutions Company — a qualitative research case study by Instrex.",
       },
       {
         property: "og:title",
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/qualitative-research")({
       {
         property: "og:description",
         content:
-          "A 360° qualitative study across internal and external stakeholders uncovered the real barriers behind a growth plateau.",
+          "A full qualitative research program across internal and external stakeholders uncovered the real barriers behind a growth plateau.",
       },
     ],
   }),
@@ -32,7 +32,7 @@ function QualitativeResearch() {
     <>
       <PageHeader
         kicker="Qualitative Research"
-        title="Reviving Growth for a HoReCa F&B Solutions Company Through Strategic Alignment"
+        title="Reviving Growth for a HoReCa F&B Solutions Company"
         image={qualImage}
         imageAlt="Professional kitchen team in a hospitality environment"
       />
@@ -40,40 +40,40 @@ function QualitativeResearch() {
       <Section>
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
-            <SectionTitle className="text-2xl md:text-3xl">Context</SectionTitle>
+            <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
             <span className="gold-rule" />
             <p className="prose-instrex">
-              A leading HoReCa-focused F&B solutions company was facing stagnant growth despite a
-              strong product range and established market presence.
+              A HoReCa-focused F&amp;B company had a solid product range and strong market presence,
+              but growth had stalled.
             </p>
-            <p className="prose-instrex">The issue wasn’t market demand — it was internal misalignment:</p>
-            <GoldList
-              items={[
-                "Management lacked a unified business view",
-                "Teams worked in silos without shared direction",
-                "The corporate brand lacked clarity and trust",
-                "Product brands operated independently, confusing customers and diluting marketing impact",
-              ]}
-            />
             <p className="prose-instrex">
-              To regain momentum, the company first needed strategic clarity and alignment.
+              The problem wasn’t demand. It was that management had no shared view of the business,
+              teams worked in silos, the corporate brand lacked clarity, and product brands ran
+              independently of each other, confusing customers and diluting marketing spend.
+            </p>
+            <p className="prose-instrex">
+              The core issues were structural: a blurred corporate identity, weak links between
+              product brands and the parent company, inconsistent messaging across SKUs, and a sales
+              culture built around discounts instead of relationships. Fixing marketing or sales in
+              isolation wasn’t going to solve any of it.
             </p>
           </Reveal>
           <Reveal delay={0.15}>
-            <Panel title="The Challenge - Organizational Fragmentation">
-              <p className="prose-instrex">The problems were systemic, not tactical:</p>
+            <Panel title="What We Did">
+              <p className="prose-instrex">
+                We ran a full qualitative research program covering both internal and external
+                stakeholders.
+              </p>
               <GoldList
                 className="mt-4"
                 items={[
-                  "A blurred corporate identity that failed to inspire confidence among customers and partners.",
-                  "A weak association of product brands with corporate brand.",
-                  "Fragmented product messaging with no consistent narrative across SKUs",
-                  "A price-driven sales culture limiting long-term relationships",
+                  "On the outside, we talked to HoReCa owners, chefs, distributors, and channel partners.",
+                  "On the inside, we spoke with sales, marketing, and operations teams.",
                 ]}
               />
               <p className="prose-instrex mt-5">
-                Without a shared understanding of these issues, isolated marketing or sales fixes
-                wouldn’t deliver lasting results.
+                This showed us how internal misalignment was shaping what customers actually
+                experienced and how they bought.
               </p>
             </Panel>
           </Reveal>
@@ -82,154 +82,67 @@ function QualitativeResearch() {
 
       <Section tone="ink">
         <Reveal>
-          <SectionTitle>
-            Research Approach - A 360 <span className="text-gold">°</span>Qualitative Study
-          </SectionTitle>
+          <SectionTitle>What We Found</SectionTitle>
           <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8 max-w-3xl">
-          <p className="prose-instrex">
-            Instrex conducted a holistic qualitative research program across both internal and
-            external stakeholders to uncover root causes of underperformance.
-          </p>
-        </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <Reveal delay={0.15}>
-            <Panel title="External Stakeholders:" className="h-full">
-              <GoldList
-                items={["HoReCa owners and chefs", "Distributors and channel partners"]}
-              />
-            </Panel>
-          </Reveal>
-          <Reveal delay={0.25}>
-            <Panel title="Internal Teams:" className="h-full">
-              <GoldList items={["Sales, Marketing, and Operations"]} />
-            </Panel>
-          </Reveal>
-        </div>
-        <Reveal delay={0.3} className="mt-10 max-w-3xl">
-          <p className="prose-instrex">
-            This dual perspective revealed how internal misalignment was directly shaping external
-            perception and buying behavior.
-          </p>
-        </Reveal>
-      </Section>
-
-      <Section>
-        <Reveal>
-          <SectionTitle>Key Insights: Uncovering The Real Barrier</SectionTitle>
-          <span className="gold-rule mt-8" />
-        </Reveal>
-        <Reveal delay={0.1} className="mt-8">
-          <p className="prose-instrex">The research surfaced three core issues:</p>
+          <p className="prose-instrex">Three issues came up consistently:</p>
         </Reveal>
         <Stagger className="mt-10 grid gap-8 md:grid-cols-3">
           {[
-            {
-              t: "Product Story Misalignment:",
-              d: "Product narratives failed to address chefs’ real kitchen-level challenges.",
-            },
-            {
-              t: "Transactional Sales Approach:",
-              d: "Sales focused on discounts over partnership, limiting loyalty and wallet share.",
-            },
-            {
-              t: "Fragmented Brand Expression:",
-              d: "Inconsistent visuals and messaging weakened trust and recognition.",
-            },
-          ].map((i) => (
-            <StaggerItem key={i.t}>
-              <Panel title={i.t} className="h-full">
-                <p className="prose-instrex">{i.d}</p>
+            "Product stories didn’t speak to the real problems chefs faced in their kitchens.",
+            "Sales leaned on discounts instead of building partnerships, which capped loyalty and wallet share.",
+            "And brand visuals and messaging were inconsistent enough to weaken trust and recognition.",
+          ].map((item) => (
+            <StaggerItem key={item}>
+              <Panel className="h-full">
+                <p className="prose-instrex">{item}</p>
               </Panel>
             </StaggerItem>
           ))}
         </Stagger>
-        <Reveal delay={0.2} className="mt-10">
+        <Reveal delay={0.2} className="mt-10 max-w-3xl">
           <p className="prose-instrex">
-            Individually, these seemed functional. Together, they explained the growth plateau.
+            On their own, each looked like a minor operational issue. Together, they explained why
+            growth had flattened.
           </p>
         </Reveal>
       </Section>
 
       <Section tone="muted">
         <Reveal>
-          <SectionTitle>Strategic Recommendations</SectionTitle>
+          <SectionTitle>What We Recommended</SectionTitle>
           <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8">
-          <p className="prose-instrex">
-            Based on these insights, Instrex designed three integrated programs to realign the
-            organization.
-          </p>
+          <p className="prose-instrex">We built three connected programs:</p>
         </Reveal>
         <Stagger className="mt-12 grid gap-8 md:grid-cols-3">
-          <StaggerItem>
-            <Panel title="1. Product and Packaging Program" className="h-full">
-              <GoldList
-                items={[
-                  "Activate underperforming SKUs with tailored regional plans",
-                  "Align new product development with HoReCa demand",
-                  "Standardize launch playbooks and fix packaging usability issues",
-                ]}
-              />
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="2. Sales Engagement Transformation" className="h-full">
-              <GoldList
-                items={[
-                  "Shift from transactional to relationship-led selling",
-                  "Introduce training, new sales guidelines, and measurable targets",
-                  "Build structured customer engagement frameworks",
-                ]}
-              />
-            </Panel>
-          </StaggerItem>
-          <StaggerItem>
-            <Panel title="3. Brand and Communication Reset" className="h-full">
-              <GoldList
-                items={[
-                  "Redefine brand architecture across corporate and product levels",
-                  "Develop a clear, unified brand identity",
-                ]}
-              />
-              <p className="prose-instrex mt-4">
-                Roll out the new system across all communication and design touchpoints
-              </p>
-            </Panel>
-          </StaggerItem>
+          {[
+            "First, a product and packaging plan: reactivate underperforming SKUs with region-specific plans, align new products with actual HoReCa needs, and fix packaging and launch consistency.",
+            "Second, a sales shift: move from transactional selling to relationship-led selling, backed by training, clearer guidelines, and real targets.",
+            "Third, a brand reset: redefine the relationship between the corporate and product brands, build one clear identity, and roll it out across every touchpoint.",
+          ].map((item) => (
+            <StaggerItem key={item}>
+              <Panel className="h-full">
+                <p className="prose-instrex">{item}</p>
+              </Panel>
+            </StaggerItem>
+          ))}
         </Stagger>
       </Section>
 
       <Section tone="ink">
-        <Reveal>
-          <SectionTitle>Outcome: Unified Vision, Renewed Growth</SectionTitle>
+        <Reveal className="max-w-3xl">
+          <SectionTitle>The Result</SectionTitle>
           <span className="gold-rule mt-8" />
+          <p className="prose-instrex mt-8">
+            Leadership got behind a single roadmap instead of separate fixes. SKU performance
+            improved, customer relationships got stronger, and brand recall picked up. The company
+            regained market share, and it came from fixing alignment first, not from another round of
+            tactical patches.
+          </p>
         </Reveal>
-        <div className="mt-10 grid gap-12 md:grid-cols-2">
-          <Reveal delay={0.1} className="space-y-6">
-            <p className="prose-instrex">
-              Leadership adopted a single strategic roadmap, aligning teams around shared priorities
-              and KPIs.
-            </p>
-            <p className="prose-instrex">The results included:</p>
-            <GoldList
-              items={[
-                "Improved SKU velocity and portfolio performance",
-                "Stronger customer relationships and retention",
-                "Enhanced brand recall and marketplace credibility",
-              ]}
-            />
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="prose-instrex">
-              With clarity restored and teams aligned, the company reignited growth and recovered
-              market share — proving that strategic coherence drives transformation far more
-              effectively than tactical fixes.
-            </p>
-          </Reveal>
-        </div>
       </Section>
     </>
   );
