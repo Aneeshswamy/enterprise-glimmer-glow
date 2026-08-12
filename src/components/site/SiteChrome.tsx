@@ -201,7 +201,6 @@ export function SiteFooter() {
               className="h-9 w-auto"
             />
           </span>
-          <span className="gold-rule mt-5" />
         </div>
         <div className="space-y-2 font-sans text-sm text-ink-foreground/70">
           <p>

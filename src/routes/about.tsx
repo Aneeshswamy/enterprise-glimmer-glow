@@ -37,7 +37,6 @@ function About() {
       <Section>
         <Reveal>
           <SectionTitle>Our Approach</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-16 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <Reveal className="space-y-6">
@@ -73,9 +72,7 @@ function About() {
 
       <Section tone="muted">
         <Reveal>
-          <Kicker>Instrex</Kicker>
           <SectionTitle className="mt-6">Our Team</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
           <p className="prose-instrex">
@@ -102,7 +99,6 @@ function About() {
                 <p className="font-sans text-base font-semibold text-ink-foreground">
                   Ashutosh Tyagi, Director and Partner
                 </p>
-                <span className="gold-rule mt-4" />
               </div>
             </div>
           </Reveal>

@@ -53,7 +53,6 @@ function BrandStrategy() {
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
-            <span className="gold-rule" />
             <p className="prose-instrex">
               A new cosmetics brand built on natural, honest ingredients wanted to launch as premium
               to luxury. The hard part was doing that without losing what made it credible in the
@@ -79,7 +78,6 @@ function BrandStrategy() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>The 6-Dimension Brand Identity Model</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-12 grid gap-6 md:grid-cols-3">
           {dimensions.map((d) => (
@@ -96,7 +94,6 @@ function BrandStrategy() {
       <Section>
         <Reveal>
           <SectionTitle>Building the Brand Foundations</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8">
           <p className="prose-instrex">
@@ -133,7 +130,6 @@ function BrandStrategy() {
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">What We Delivered</SectionTitle>
-            <span className="gold-rule" />
             <p className="prose-instrex">
               A full Brand Identity Guidebook covering the strategic direction, the visual and verbal
               identity, and the standards to keep everything consistent as the brand grows. This
@@ -163,7 +159,6 @@ function BrandStrategy() {
       <Section tone="ink">
         <Reveal className="max-w-3xl">
           <SectionTitle>The Result</SectionTitle>
-          <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
             The brand launched with a credible, premium identity that stayed rooted in its natural
             story. Because the creative work was grounded in real strategy first, the brand had

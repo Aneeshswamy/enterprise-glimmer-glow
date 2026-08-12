@@ -100,7 +100,6 @@ function MarketResearch() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>Market Research And Analysis</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-16 grid gap-8 md:grid-cols-2">
           {blocks.map((b) => (

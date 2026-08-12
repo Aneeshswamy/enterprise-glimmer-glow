@@ -41,7 +41,6 @@ function QuantitativeResearch() {
         <div className="grid gap-14 md:grid-cols-[1fr_0.8fr] md:items-start">
           <Reveal className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
-            <span className="gold-rule" />
             <p className="prose-instrex">
               A senior care provider wanted to launch a subscription platform that bundled healthcare,
               housekeeping, and daily assistance into one plan for urban seniors.
@@ -69,7 +68,6 @@ function QuantitativeResearch() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>What We Found</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-12 grid gap-8 md:grid-cols-3">
           <StaggerItem>
@@ -104,7 +102,6 @@ function QuantitativeResearch() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>What We Recommended</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-12 grid gap-8 md:grid-cols-3">
           <StaggerItem>
@@ -133,7 +130,6 @@ function QuantitativeResearch() {
       <Section tone="ink">
         <Reveal className="max-w-3xl">
           <SectionTitle>The Result</SectionTitle>
-          <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
             The client had clear proof that the model worked, a shortlist of which plans to build, and
             a go-to-market plan built around real audience segments. That gave them a faster,
