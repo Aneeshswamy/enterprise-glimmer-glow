@@ -178,3 +178,16 @@
     font-weight: 600;
   }
 }
+
+/* Hide Lovable publish watermark / “Edit with Lovable” badge */
+#lovable-badge,
+#lovable-badge-cta,
+#lovable-badge-text,
+#lovable-badge-divider,
+#lovable-badge-close,
+aside#lovable-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}

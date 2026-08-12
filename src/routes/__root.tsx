@@ -91,8 +91,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Instrex — Insights to Impact Business Consulting" },
       { property: "og:description", content: "Insights - Market Research and Analysis. Strategy - Business Growth Blueprint. Execution - Strategy Implementation Facilitation and Funding Support." },
       { name: "twitter:description", content: "Insights - Market Research and Analysis. Strategy - Business Growth Blueprint. Execution - Strategy Implementation Facilitation and Funding Support." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c2e40bb5-80f3-4625-985d-14382a3f72e5/id-preview-7203ace4--c7f78f8d-a87f-4dc8-bf35-5667c682b631.lovable.app-1785709064641.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c2e40bb5-80f3-4625-985d-14382a3f72e5/id-preview-7203ace4--c7f78f8d-a87f-4dc8-bf35-5667c682b631.lovable.app-1785709064641.png" },
+      { property: "og:image", content: "/favicon.png" },
+      { name: "twitter:image", content: "/favicon.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
