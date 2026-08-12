@@ -10,9 +10,13 @@ import heroSlide4 from "@/assets/case-gtm.jpg";
 import insightsImage from "@/assets/service-insights.jpg";
 import strategyImage from "@/assets/service-strategy.jpg";
 import executionImage from "@/assets/service-execution.jpg";
-import bridgeImage from "@/assets/bridge-insight-impact.jpg";
+import homeArt from "@/assets/home-insight-growth.png";
+import brandLogos from "@/assets/brand-logos.png";
+import insightsArt from "@/assets/art-market-research.png";
+import strategyArt from "@/assets/art-growth-blueprint.png";
+import executionArt from "@/assets/art-strategy-implementation.png";
 import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
-import { GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
+import { FeatureBand, GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -222,101 +226,119 @@ function Home() {
             </Reveal>
           </div>
           <Reveal delay={0.2}>
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 h-full w-full border border-gold/30" />
-              <img
-                src={bridgeImage}
-                alt="A sleek bridge connecting two cliffs"
-                loading="lazy"
-                width={1440}
-                height={810}
-                className="relative aspect-[4/5] w-full object-cover"
-              />
-            </div>
+            <img
+              src={homeArt}
+              alt="Market signals converging into a bridge that leads to a growing city"
+              loading="lazy"
+              width={1600}
+              height={1200}
+              className="aspect-[4/5] w-full rounded-lg object-cover shadow-[var(--shadow-elegant)]"
+            />
           </Reveal>
         </div>
       </Section>
 
-      <Section tone="ink">
-        <Reveal className="text-center">
+      <section className="bg-ink px-6 pt-24 pb-4 text-ink-foreground md:pt-32">
+        <Reveal className="mx-auto w-full max-w-4xl text-center">
           <Kicker>What We Do</Kicker>
           <SectionTitle className="mt-6">Services</SectionTitle>
         </Reveal>
+      </section>
 
-        <Stagger className="mt-20 grid gap-8 md:grid-cols-3">
-          {serviceCards.map((card) => (
-            <StaggerItem key={card.title}>
-              <article className="glass-dark lift flex h-full flex-col rounded-lg">
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  loading="lazy"
-                  width={1024}
-                  height={1024}
-                  className="h-44 w-full rounded-t-lg object-cover opacity-80"
-                />
-                <div className="flex flex-1 flex-col p-8">
-                  <h3 className="font-sans text-base leading-snug font-semibold text-ink-foreground">
-                    {card.title}
-                  </h3>
-                  {card.bullets ? (
-                    <GoldList className="mt-6" items={card.bullets} />
-                  ) : (
-                    <div className="mt-6 space-y-5">
-                      <div>
-                        <p className="font-sans text-sm font-semibold text-ink-foreground">
-                          Strategy Implementation
-                        </p>
-                        <p className="prose-instrex mt-2 text-[0.95rem]">
-                          Facilitating execution through a network of trusted specialist partners,
-                          including marketing specialists, sales professionals, finance experts, and
-                          investment bankers.
-                        </p>
-                      </div>
-                      <div>
-                        <p className="font-sans text-sm font-semibold text-ink-foreground">
-                          Funding Support
-                        </p>
-                        <p className="prose-instrex mt-2 text-[0.95rem]">
-                          Connecting ambitious businesses with the right investors.
-                        </p>
-                        <GoldList
-                          className="mt-3"
-                          items={[
-                            "Creating investor-ready pitch decks",
-                            "Facilitating funding through our trusted investor network",
-                          ]}
-                        />
-                      </div>
-                    </div>
-                  )}
-                  {card.sub ? (
-                    <div className="mt-4 space-y-1.5 border-l border-gold/30 pl-5">
-                      {card.sub.map((line) => (
-                        <p key={line} className="prose-instrex text-[0.95rem]">
-                          {line}
-                        </p>
-                      ))}
-                    </div>
-                  ) : null}
-                  {card.footnote ? (
-                    <p className="mt-6 font-sans text-[0.8rem] leading-relaxed font-semibold text-gold">
-                      {card.footnote}
-                    </p>
-                  ) : null}
-                  <Link
-                    to={card.to}
-                    className="group mt-8 inline-flex items-center gap-2 font-sans text-[0.7rem] tracking-[0.2em] text-ink-foreground/70 uppercase transition-colors hover:text-gold"
-                  >
-                    Know More
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                  </Link>
-                </div>
-              </article>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </Section>
+      <FeatureBand
+        eyebrow="Insights"
+        title="Insights — Market Research and Analysis"
+        image={insightsArt}
+        imageAlt="A lens held over a city grid, revealing market data points"
+        tone="ink"
+      >
+        <GoldList
+          items={[
+            "Consumer needs and preference mapping",
+            "Brand equity, positioning, and performance analysis",
+            "Sales and distribution channel insights",
+            "Business and B2B research",
+            "Competitor benchmarking and evaluation",
+          ]}
+        />
+        <p className="font-sans text-[0.85rem] leading-relaxed font-semibold text-gold">
+          Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary Research
+        </p>
+        <Link
+          to="/market-research"
+          className="group inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase"
+        >
+          Know More
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </FeatureBand>
+
+      <FeatureBand
+        eyebrow="Strategy"
+        title="Strategy — Business Growth Blueprint"
+        image={strategyArt}
+        imageAlt="A glowing piece completing a transparent business blueprint"
+        flip
+      >
+        <GoldList
+          items={[
+            "Business modelling and growth blueprint for sustained value creation",
+            "Go to market strategy",
+            "Mid-term and long-term financial planning",
+            "Market and financial feasibility for new ventures",
+          ]}
+        />
+        <div className="space-y-1.5 border-l border-gold/30 pl-6">
+          <p className="prose-instrex">Product and pricing strategy</p>
+          <p className="prose-instrex">Sales and distribution planning</p>
+          <p className="prose-instrex">Brand strategy and marketing communication planning</p>
+        </div>
+        <Link
+          to="/business-strategy"
+          className="group inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase"
+        >
+          Know More
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </FeatureBand>
+
+      <FeatureBand
+        eyebrow="Execution"
+        title="Execution — Strategy Implementation, Facilitation & Funding Support"
+        image={executionArt}
+        imageAlt="Hands assembling gears over a city blueprint"
+        tone="ink"
+      >
+        <div>
+          <p className="font-sans text-sm font-semibold text-ink-foreground">
+            Strategy Implementation
+          </p>
+          <p className="prose-instrex mt-3">
+            Facilitating execution through a network of trusted specialist partners, including
+            marketing specialists, sales professionals, finance experts, and investment bankers.
+          </p>
+        </div>
+        <div>
+          <p className="font-sans text-sm font-semibold text-ink-foreground">Funding Support</p>
+          <p className="prose-instrex mt-3">
+            Connecting ambitious businesses with the right investors.
+          </p>
+          <GoldList
+            className="mt-4"
+            items={[
+              "Creating investor-ready pitch decks",
+              "Facilitating funding through our trusted investor network",
+            ]}
+          />
+        </div>
+        <Link
+          to="/strategy-execution"
+          className="group inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase"
+        >
+          Know More
+          <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </FeatureBand>
 
       <Section>
         <Reveal>
@@ -344,6 +366,16 @@ function Home() {
       <Section tone="ink">
         <Reveal className="text-center">
           <SectionTitle>Brands We’ve Worked With</SectionTitle>
+        </Reveal>
+        <Reveal delay={0.12} className="mt-14">
+          <img
+            src={brandLogos}
+            alt="Logos of brands Instrex has worked with"
+            loading="lazy"
+            width={1600}
+            height={900}
+            className="w-full rounded-lg object-contain"
+          />
         </Reveal>
       </Section>
 
