@@ -165,3 +165,115 @@ export function Timeline({
     </div>
   );
 }
+
+/**
+ * Full-width editorial feature band. Used to present each service as its own
+ * premium section, one after another, alternating image side.
+ */
+export function FeatureBand({
+  eyebrow,
+  title,
+  image,
+  imageAlt,
+  flip = false,
+  tone = "default",
+  children,
+}: {
+  eyebrow?: string;
+  title: ReactNode;
+  image?: string;
+  imageAlt?: string;
+  flip?: boolean;
+  tone?: "default" | "ink" | "muted";
+  children: ReactNode;
+}) {
+  const tones: Record<string, string> = {
+    default: "bg-background text-foreground",
+    ink: "bg-ink text-ink-foreground",
+    muted: "bg-muted text-foreground",
+  };
+  return (
+    <section className={`${tones[tone]} px-6 py-24 md:py-32`}>
+      <div
+        className={`mx-auto grid w-full max-w-6xl items-center gap-14 md:gap-20 ${
+          image ? "md:grid-cols-2" : "max-w-4xl"
+        }`}
+      >
+        <Reveal className={flip ? "md:order-2" : ""}>
+          {eyebrow ? <p className="kicker">{eyebrow}</p> : null}
+          <h2 className="mt-5 text-3xl leading-[1.15] font-normal md:text-[2.75rem]">{title}</h2>
+          <div className="mt-8 space-y-6">{children}</div>
+        </Reveal>
+        {image ? (
+          <Reveal delay={0.14} className={flip ? "md:order-1" : ""}>
+            <img
+              src={image}
+              alt={imageAlt ?? ""}
+              loading="lazy"
+              width={1600}
+              height={1200}
+              className="aspect-[4/3] w-full rounded-lg object-cover shadow-[var(--shadow-elegant)]"
+            />
+          </Reveal>
+        ) : null}
+      </div>
+    </section>
+  );
+}
+
+/**
+ * Continuous research narrative. Chapters flow down a single thread so a case
+ * study reads as one story rather than a set of disconnected card sections.
+ */
+export function Story({ children, className = "" }: { children: ReactNode; className?: string }) {
+  return (
+    <div className={`relative mx-auto w-full max-w-4xl ${className}`}>
+      <span className="absolute top-2 bottom-2 left-0 w-px bg-gradient-to-b from-gold/70 via-hairline to-transparent md:left-1" />
+      <div className="space-y-20 pl-8 md:space-y-28 md:pl-16">{children}</div>
+    </div>
+  );
+}
+
+export function Chapter({
+  label,
+  title,
+  children,
+  media,
+  mediaAlt,
+  mediaCaption,
+}: {
+  label: string;
+  title?: ReactNode;
+  children?: ReactNode;
+  media?: string;
+  mediaAlt?: string;
+  mediaCaption?: string;
+}) {
+  return (
+    <Reveal className="relative">
+      <span className="absolute top-[0.6rem] -left-8 h-[7px] w-[7px] rounded-full bg-gold md:-left-16 md:ml-[-3px] md:translate-x-[1px]" />
+      <p className="kicker">{label}</p>
+      {title ? (
+        <h2 className="mt-5 text-2xl leading-[1.2] font-normal md:text-[2.1rem]">{title}</h2>
+      ) : null}
+      {children ? <div className="mt-7 space-y-6">{children}</div> : null}
+      {media ? (
+        <figure className="mt-12">
+          <img
+            src={media}
+            alt={mediaAlt ?? ""}
+            loading="lazy"
+            width={1600}
+            height={900}
+            className="w-full rounded-lg object-cover shadow-[var(--shadow-elegant)]"
+          />
+          {mediaCaption ? (
+            <figcaption className="mt-4 font-sans text-xs tracking-[0.14em] text-muted-foreground uppercase">
+              {mediaCaption}
+            </figcaption>
+          ) : null}
+        </figure>
+      ) : null}
+    </Reveal>
+  );
+}
