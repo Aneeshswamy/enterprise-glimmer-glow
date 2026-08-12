@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 
-import insightsImage from "@/assets/service-insights.jpg";
+import insightsArt from "@/assets/art-market-research.png";
+import strategyArt from "@/assets/art-growth-blueprint.png";
+import executionArt from "@/assets/art-strategy-implementation.png";
 import strategyImage from "@/assets/service-strategy.jpg";
-import executionImage from "@/assets/service-execution.jpg";
-import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
-import { Kicker, PageHeader, Section, SectionTitle } from "@/components/site/Layout";
+import { Reveal } from "@/components/site/Reveal";
+import { FeatureBand, GoldList, PageHeader } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -26,56 +27,107 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
-const services = [
-  { title: "Insights — Market Research and Analysis", to: "/market-research", image: insightsImage },
-  { title: "Strategy — Business Growth Blueprint", to: "/business-strategy", image: strategyImage },
-  {
-    title: "Execution — Strategy Implementation, Facilitation & Funding Support",
-    to: "/strategy-execution",
-    image: executionImage,
-  },
-];
+function KnowMore({ to }: { to: string }) {
+  return (
+    <Link
+      to={to}
+      className="group inline-flex items-center gap-3 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase"
+    >
+      Know More
+      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+    </Link>
+  );
+}
 
 function Services() {
   return (
     <>
-      <PageHeader
-        title="Services"
-        image={strategyImage}
-        imageAlt="Strategy session at Instrex"
-      />
-      <Section>
-        <Reveal>
-          <Kicker>Explore</Kicker>
-          <SectionTitle className="mt-6">Services</SectionTitle>
+      <PageHeader title="Services" image={strategyImage} imageAlt="Strategy session at Instrex" />
+
+      <FeatureBand
+        eyebrow="Insights"
+        title="Insights — Market Research and Analysis"
+        image={insightsArt}
+        imageAlt="A lens held over a city grid, revealing market data points"
+      >
+        <GoldList
+          items={[
+            "Consumer needs and preference mapping",
+            "Brand equity, positioning, and performance analysis",
+            "Sales and distribution channel insights",
+            "Business and B2B research",
+            "Competitor benchmarking and evaluation",
+          ]}
+        />
+        <p className="font-sans text-[0.85rem] leading-relaxed font-semibold text-gold">
+          Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary Research
+        </p>
+        <KnowMore to="/market-research" />
+      </FeatureBand>
+
+      <FeatureBand
+        eyebrow="Strategy"
+        title="Strategy — Business Growth Blueprint"
+        image={strategyArt}
+        imageAlt="A glowing piece completing a transparent business blueprint"
+        flip
+        tone="ink"
+      >
+        <GoldList
+          items={[
+            "Business modelling and growth blueprint for sustained value creation",
+            "Go to market strategy",
+            "Mid-term and long-term financial planning",
+            "Market and financial feasibility for new ventures",
+          ]}
+        />
+        <div className="space-y-1.5 border-l border-gold/30 pl-6">
+          <p className="prose-instrex">Product and pricing strategy</p>
+          <p className="prose-instrex">Sales and distribution planning</p>
+          <p className="prose-instrex">Brand strategy and marketing communication planning</p>
+        </div>
+        <KnowMore to="/business-strategy" />
+      </FeatureBand>
+
+      <FeatureBand
+        eyebrow="Execution"
+        title="Execution — Strategy Implementation, Facilitation & Funding Support"
+        image={executionArt}
+        imageAlt="Hands assembling gears over a city blueprint"
+      >
+        <div>
+          <p className="font-sans text-sm font-semibold">Strategy Implementation</p>
+          <p className="prose-instrex mt-3">
+            Facilitating execution through a network of trusted specialist partners, including
+            marketing specialists, sales professionals, finance experts, and investment bankers.
+          </p>
+        </div>
+        <div>
+          <p className="font-sans text-sm font-semibold">Funding Support</p>
+          <p className="prose-instrex mt-3">Connecting ambitious businesses with the right investors.</p>
+          <GoldList
+            className="mt-4"
+            items={[
+              "Creating investor-ready pitch decks",
+              "Facilitating funding through our trusted investor network",
+            ]}
+          />
+        </div>
+        <KnowMore to="/strategy-execution" />
+      </FeatureBand>
+
+      <section className="bg-muted px-6 py-24 md:py-28">
+        <Reveal className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 text-center">
+          <h2 className="text-3xl leading-tight font-normal md:text-4xl">Connect with us</h2>
+          <Link
+            to="/connect-with-us"
+            className="group inline-flex items-center gap-3 border border-foreground/25 px-8 py-4 font-sans text-[0.72rem] tracking-[0.2em] uppercase transition-colors hover:border-gold hover:text-gold"
+          >
+            Submit your enquiry
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+          </Link>
         </Reveal>
-        <Stagger className="mt-16 grid gap-8 md:grid-cols-3">
-          {services.map((s) => (
-            <StaggerItem key={s.to}>
-              <Link to={s.to} className="lift group block overflow-hidden rounded-lg">
-                <div className="relative isolate">
-                  <img
-                    src={s.image}
-                    alt={s.title}
-                    loading="lazy"
-                    width={1024}
-                    height={1024}
-                    className="aspect-[4/5] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-7 text-ink-foreground">
-                    <h2 className="font-display text-2xl">{s.title}</h2>
-                    <span className="mt-4 inline-flex items-center gap-2 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase">
-                      Know More
-                      <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </StaggerItem>
-          ))}
-        </Stagger>
-      </Section>
+      </section>
     </>
   );
 }
