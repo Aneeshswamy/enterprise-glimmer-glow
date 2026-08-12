@@ -194,7 +194,6 @@ function Home() {
         <div className="grid items-center gap-16 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Reveal>
-              <Kicker>Instrex</Kicker>
               <SectionTitle className="mt-6">
                 Research and Growth Plans, Built Together.
               </SectionTitle>
@@ -321,7 +320,6 @@ function Home() {
 
       <Section>
         <Reveal>
-          <Kicker>Instrex</Kicker>
           <SectionTitle className="mt-6">Industries We Serve</SectionTitle>
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl">

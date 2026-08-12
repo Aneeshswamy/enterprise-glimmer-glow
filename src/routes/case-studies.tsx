@@ -66,7 +66,6 @@ function CaseStudies() {
   return (
     <>
       <PageHeader
-        kicker="Instrex"
         title="Case Studies"
         image={qualImage}
         imageAlt="Instrex consulting case studies"

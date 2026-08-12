@@ -72,7 +72,6 @@ function About() {
 
       <Section tone="muted">
         <Reveal>
-          <Kicker>Instrex</Kicker>
           <SectionTitle className="mt-6">Our Team</SectionTitle>
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">

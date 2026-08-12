@@ -31,7 +31,6 @@ function Connect() {
   return (
     <>
       <PageHeader
-        kicker="Instrex"
         title="Connect with us"
         image={heroImage}
         imageAlt="Instrex consulting office"

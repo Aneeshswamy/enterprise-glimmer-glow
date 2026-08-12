@@ -40,7 +40,6 @@ function Services() {
   return (
     <>
       <PageHeader
-        kicker="Instrex"
         title="Services"
         image={strategyImage}
         imageAlt="Strategy session at Instrex"
