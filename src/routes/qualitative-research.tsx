@@ -41,7 +41,6 @@ function QualitativeResearch() {
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
-            <span className="gold-rule" />
             <p className="prose-instrex">
               A HoReCa-focused F&amp;B company had a solid product range and strong market presence,
               but growth had stalled.
@@ -83,7 +82,6 @@ function QualitativeResearch() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>What We Found</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8 max-w-3xl">
           <p className="prose-instrex">Three issues came up consistently:</p>
@@ -112,7 +110,6 @@ function QualitativeResearch() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>What We Recommended</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8">
           <p className="prose-instrex">We built three connected programs:</p>
@@ -135,7 +132,6 @@ function QualitativeResearch() {
       <Section tone="ink">
         <Reveal className="max-w-3xl">
           <SectionTitle>The Result</SectionTitle>
-          <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
             Leadership got behind a single roadmap instead of separate fixes. SKU performance
             improved, customer relationships got stronger, and brand recall picked up. The company

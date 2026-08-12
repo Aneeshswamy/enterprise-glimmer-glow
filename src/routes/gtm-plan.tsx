@@ -45,7 +45,6 @@ function GtmPlan() {
         <div className="grid gap-14 md:grid-cols-2 md:items-start">
           <Reveal className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
-            <span className="gold-rule" />
             <p className="prose-instrex">
               A new raw milk and dairy brand wanted to enter Tier-2 and Tier-3 cities through a
               subscription app, one that also offered value-added dairy products and grocery
@@ -60,7 +59,6 @@ function GtmPlan() {
           </Reveal>
           <Reveal delay={0.15} className="space-y-6">
             <SectionTitle className="text-2xl md:text-3xl">What We Set Out to Do</SectionTitle>
-            <span className="gold-rule" />
             <GoldList
               items={[
                 "Build awareness beyond the usual early digital adopters",
@@ -75,7 +73,6 @@ function GtmPlan() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>Our Approach: A Three-Phase Launch</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-16">
           <Timeline
@@ -133,7 +130,6 @@ function GtmPlan() {
       <Section>
         <Reveal>
           <SectionTitle>Results After Six Months</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <StaggerItem>
@@ -154,7 +150,6 @@ function GtmPlan() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>What Drove This</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl">
           <p className="prose-instrex">
@@ -170,7 +165,6 @@ function GtmPlan() {
       <Section tone="ink">
         <Reveal className="max-w-3xl">
           <SectionTitle>The Result</SectionTitle>
-          <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
             The brand turned a commodity product into a subscription business people actually stuck
             with, and built a real foothold as a daily essential across Tier-2 and Tier-3 markets.

@@ -62,7 +62,6 @@ function BusinessStrategy() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>Go To Market Strategy</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <Reveal delay={0.1} className="space-y-6">
@@ -82,7 +81,6 @@ function BusinessStrategy() {
           <Reveal delay={0.2}>
             <div className="glass-dark rounded-lg p-8">
               <h3 className="font-display text-2xl text-ink-foreground">7Ps of Marketing</h3>
-              <span className="gold-rule mt-5" />
               <Stagger className="mt-8 grid grid-cols-2 gap-3">
                 {sevenPs.map((p, i) => (
                   <StaggerItem key={p}>
@@ -103,7 +101,6 @@ function BusinessStrategy() {
       <Section>
         <Reveal>
           <SectionTitle>Brand Strategy</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
           <p className="prose-instrex">
@@ -122,7 +119,6 @@ function BusinessStrategy() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>Financial Planning</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-12 md:grid-cols-2 md:items-start">
           <Reveal delay={0.1}>
@@ -148,7 +144,6 @@ function BusinessStrategy() {
       <Section>
         <Reveal>
           <SectionTitle>Market and Financial Feasibility</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl space-y-6">
           <p className="prose-instrex">

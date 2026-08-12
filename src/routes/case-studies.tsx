@@ -75,7 +75,6 @@ function CaseStudies() {
         <Reveal>
           <Kicker>Selected work</Kicker>
           <SectionTitle className="mt-6">Case Studies</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-16 space-y-6">
           {cases.map((c) => (

@@ -37,7 +37,6 @@ function StrategyExecution() {
       <Section>
         <Reveal>
           <SectionTitle>Strategy Implementation</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-start">
           <Reveal className="space-y-6">
@@ -75,7 +74,6 @@ function StrategyExecution() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>Funding Support</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <div className="mt-12 grid gap-8 md:grid-cols-2">
           <Reveal delay={0.1}>

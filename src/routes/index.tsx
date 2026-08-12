@@ -112,7 +112,6 @@ function Hero() {
           </p>
         </Reveal>
         <Reveal delay={0.24}>
-          <span className="gold-rule mt-12" />
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {heroPillars.map((p) => (
               <div key={p.label}>
@@ -199,7 +198,6 @@ function Home() {
               <SectionTitle className="mt-6">
                 Research and Growth Plans, Built Together.
               </SectionTitle>
-              <span className="gold-rule mt-8" />
             </Reveal>
             <Reveal delay={0.1} className="mt-10 space-y-6">
               <p className="prose-instrex">
@@ -244,7 +242,6 @@ function Home() {
         <Reveal className="text-center">
           <Kicker>What We Do</Kicker>
           <SectionTitle className="mt-6">Services</SectionTitle>
-          <span className="gold-rule mx-auto mt-8" />
         </Reveal>
 
         <Stagger className="mt-20 grid gap-8 md:grid-cols-3">
@@ -326,7 +323,6 @@ function Home() {
         <Reveal>
           <Kicker>Instrex</Kicker>
           <SectionTitle className="mt-6">Industries We Serve</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl">
           <p className="prose-instrex">
@@ -350,14 +346,12 @@ function Home() {
       <Section tone="ink">
         <Reveal className="text-center">
           <SectionTitle>Brands We’ve Worked With</SectionTitle>
-          <span className="gold-rule mx-auto mt-8" />
         </Reveal>
       </Section>
 
       <Section tone="muted">
         <Reveal className="flex flex-col items-center gap-8 text-center">
           <SectionTitle>Connect with us</SectionTitle>
-          <span className="gold-rule" />
           <div className="space-y-1 font-sans text-sm tracking-[0.08em]">
             <p>business@instrex.in</p>
             <p>+91 7011845620</p>

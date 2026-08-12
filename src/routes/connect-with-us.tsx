@@ -98,7 +98,6 @@ function Connect() {
               <Phone className="mt-1 h-5 w-5 shrink-0 text-gold" />
               <p className="font-sans text-base font-semibold">Contact Number +91 7011845620</p>
             </div>
-            <span className="gold-rule" />
             <div className="flex items-start gap-4">
               <Mail className="mt-1 h-5 w-5 shrink-0 text-gold" />
               <p className="font-sans text-base font-semibold">Email: business@instrex.in</p>

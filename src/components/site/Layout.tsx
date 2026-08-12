@@ -52,7 +52,7 @@ export function PageHeader({
   image,
   imageAlt,
 }: {
-  kicker: string;
+  kicker?: string;
   title: string;
   image: string;
   imageAlt: string;
@@ -72,9 +72,8 @@ export function PageHeader({
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
       <div className="mx-auto flex min-h-[52vh] w-full max-w-6xl flex-col justify-end px-6 pt-40 pb-16">
         <Reveal>
-          <p className="kicker">{kicker}</p>
+          {kicker ? <p className="kicker">{kicker}</p> : null}
           <h1 className="mt-5 max-w-4xl text-4xl leading-[1.1] font-normal md:text-6xl">{title}</h1>
-          <span className="gold-rule mt-8" />
         </Reveal>
       </div>
     </header>

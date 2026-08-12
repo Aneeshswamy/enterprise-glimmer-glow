@@ -49,7 +49,6 @@ function Services() {
         <Reveal>
           <Kicker>Explore</Kicker>
           <SectionTitle className="mt-6">Services</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Stagger className="mt-16 grid gap-8 md:grid-cols-3">
           {services.map((s) => (

@@ -40,7 +40,6 @@ function FinancialAnalysis() {
       <Section>
         <Reveal className="max-w-3xl space-y-6">
           <SectionTitle className="text-2xl md:text-3xl">The Challenge</SectionTitle>
-          <span className="gold-rule" />
           <p className="prose-instrex">
             An automotive OEM needed to supply on-board CNG cylinders for its vehicles and had to
             decide how to source them. Should it build a manufacturing plant in India, or import
@@ -58,7 +57,6 @@ function FinancialAnalysis() {
       <Section tone="ink">
         <Reveal>
           <SectionTitle>What We Did</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8 max-w-3xl space-y-6">
           <p className="prose-instrex">
@@ -119,7 +117,6 @@ function FinancialAnalysis() {
       <Section>
         <Reveal>
           <SectionTitle>What We Found</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8 max-w-3xl space-y-6">
           <p className="prose-instrex">
@@ -137,7 +134,6 @@ function FinancialAnalysis() {
       <Section tone="muted">
         <Reveal>
           <SectionTitle>What We Recommended</SectionTitle>
-          <span className="gold-rule mt-8" />
         </Reveal>
         <Reveal delay={0.1} className="mt-8">
           <p className="prose-instrex">A two-stage approach.</p>
@@ -167,7 +163,6 @@ function FinancialAnalysis() {
       <Section tone="ink">
         <Reveal className="max-w-3xl">
           <SectionTitle>The Result</SectionTitle>
-          <span className="gold-rule mt-8" />
           <p className="prose-instrex mt-8">
             The OEM got a practical, low-risk way into the market, one that didn’t require a big
             upfront bet on manufacturing before the business case was actually proven.
