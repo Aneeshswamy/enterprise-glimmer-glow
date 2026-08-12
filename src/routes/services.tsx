@@ -4,20 +4,20 @@ import { ArrowRight } from "lucide-react";
 import insightsArt from "@/assets/art-market-research.png";
 import strategyArt from "@/assets/art-growth-blueprint.png";
 import executionArt from "@/assets/art-strategy-implementation.png";
-import strategyImage from "@/assets/service-strategy.jpg";
+import bridgeImage from "@/assets/bridge-insight-impact.jpg";
 import { Reveal } from "@/components/site/Reveal";
 import { FeatureBand, GoldList, PageHeader } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Instrex Market Research, Strategy & Execution" },
+      { title: "Services — Market Research, Strategy & Execution" },
       {
         name: "description",
         content:
-          "Market Research, Business Strategy and Strategy Execution services from Instrex — insight-led consulting for measurable growth.",
+          "Market Research, Business Strategy and Strategy Execution services — insight-led consulting for measurable growth.",
       },
-      { property: "og:title", content: "Services — Instrex Market Research, Strategy & Execution" },
+      { property: "og:title", content: "Services — Market Research, Strategy & Execution" },
       {
         property: "og:description",
         content: "Market Research. Business Strategy. Strategy Execution.",
@@ -42,7 +42,11 @@ function KnowMore({ to }: { to: string }) {
 function Services() {
   return (
     <>
-      <PageHeader title="Services" image={strategyImage} imageAlt="Strategy session at Instrex" />
+      <PageHeader
+        title="Services"
+        image={bridgeImage}
+        imageAlt="From insight to impact across consulting services"
+      />
 
       <FeatureBand
         eyebrow="Insights"
@@ -81,10 +85,10 @@ function Services() {
             "Market and financial feasibility for new ventures",
           ]}
         />
-        <div className="space-y-1.5 border-l border-gold/30 pl-6">
-          <p className="prose-instrex">Product and pricing strategy</p>
-          <p className="prose-instrex">Sales and distribution planning</p>
-          <p className="prose-instrex">Brand strategy and marketing communication planning</p>
+        <div className="space-y-1.5">
+          <p className="prose-body">Product and pricing strategy</p>
+          <p className="prose-body">Sales and distribution planning</p>
+          <p className="prose-body">Brand strategy and marketing communication planning</p>
         </div>
         <KnowMore to="/business-strategy" />
       </FeatureBand>
@@ -97,14 +101,14 @@ function Services() {
       >
         <div>
           <p className="font-sans text-sm font-semibold">Strategy Implementation</p>
-          <p className="prose-instrex mt-3">
+          <p className="prose-body mt-3">
             Facilitating execution through a network of trusted specialist partners, including
             marketing specialists, sales professionals, finance experts, and investment bankers.
           </p>
         </div>
         <div>
           <p className="font-sans text-sm font-semibold">Funding Support</p>
-          <p className="prose-instrex mt-3">Connecting ambitious businesses with the right investors.</p>
+          <p className="prose-body mt-3">Connecting ambitious businesses with the right investors.</p>
           <GoldList
             className="mt-4"
             items={[

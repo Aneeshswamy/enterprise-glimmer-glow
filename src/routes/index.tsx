@@ -4,18 +4,15 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 import heroImage from "@/assets/hero-boardroom.jpg";
-import heroSlide2 from "@/assets/case-quant.jpg";
-import heroSlide3 from "@/assets/case-brand.jpg";
-import heroSlide4 from "@/assets/case-gtm.jpg";
-import insightsImage from "@/assets/service-insights.jpg";
-import strategyImage from "@/assets/service-strategy.jpg";
-import executionImage from "@/assets/service-execution.jpg";
+import heroSlide2 from "@/assets/bridge-insight-impact.jpg";
+import heroSlide3 from "@/assets/insight-handshake.jpg";
+import heroSlide4 from "@/assets/about-approach.jpg";
 import homeArt from "@/assets/home-insight-growth.png";
 import brandLogos from "@/assets/brand-logos.png";
 import insightsArt from "@/assets/art-market-research.png";
 import strategyArt from "@/assets/art-growth-blueprint.png";
 import executionArt from "@/assets/art-strategy-implementation.png";
-import { Reveal, Stagger, StaggerItem } from "@/components/site/Reveal";
+import { Reveal } from "@/components/site/Reveal";
 import { FeatureBand, GoldList, Kicker, Section, SectionTitle } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/")({
@@ -39,10 +36,10 @@ export const Route = createFileRoute("/")({
 });
 
 const heroSlides = [
-  { src: heroImage, alt: "Instrex consulting boardroom overlooking a city skyline" },
-  { src: heroSlide2, alt: "Instrex consulting research banner" },
-  { src: heroSlide3, alt: "Instrex brand strategy banner" },
-  { src: heroSlide4, alt: "Instrex go-to-market banner" },
+  { src: heroImage, alt: "Consulting boardroom overlooking a city skyline" },
+  { src: heroSlide2, alt: "From market insight to business impact" },
+  { src: heroSlide3, alt: "Client partnership and strategic advisory" },
+  { src: heroSlide4, alt: "Executive reviewing growth strategy" },
 ];
 
 const heroPillars = [
@@ -81,7 +78,7 @@ function Hero() {
           />
         </AnimatePresence>
       </motion.div>
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-ink/85 via-ink/60 to-ink" />
+      <div className="absolute inset-0 -z-10 bg-ink/75" />
       <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 gap-3">
         {heroSlides.map((slide, i) => (
           <button
@@ -89,8 +86,8 @@ function Hero() {
             type="button"
             aria-label={`Show banner ${i + 1}`}
             onClick={() => setIndex(i)}
-            className={`h-1 rounded-full transition-all duration-500 ${
-              i === index ? "w-10 bg-gold" : "w-5 bg-ink-foreground/30"
+            className={`h-1.5 w-1.5 rounded-full transition-all duration-500 ${
+              i === index ? "bg-gold" : "bg-ink-foreground/30"
             }`}
           />
         ))}
@@ -108,21 +105,21 @@ function Hero() {
           </h1>
         </Reveal>
         <Reveal delay={0.18} className="mt-8 max-w-3xl space-y-4">
-          <p className="prose-instrex">
+          <p className="prose-body">
             We turn market insights into growth plans, and plans into results.
           </p>
-          <p className="prose-instrex">
+          <p className="prose-body">
             A business growth consulting firm built to deliver measurable outcomes.
           </p>
         </Reveal>
         <Reveal delay={0.24}>
-          <div className="mt-10 grid gap-6 sm:grid-cols-3">
+          <div className="mt-12 space-y-5">
             {heroPillars.map((p) => (
               <div key={p.label}>
                 <p className="font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase">
                   {p.label}
                 </p>
-                <p className="prose-instrex mt-2">{p.text}</p>
+                <p className="prose-body mt-1">{p.text}</p>
               </div>
             ))}
           </div>
@@ -140,44 +137,6 @@ function Hero() {
     </div>
   );
 }
-
-const serviceCards = [
-  {
-    title: "Insights — Market Research and Analysis",
-    image: insightsImage,
-    to: "/market-research",
-    bullets: [
-      "Consumer needs and preference mapping",
-      "Brand equity, positioning, and performance analysis",
-      "Sales and distribution channel insights",
-      "Business and B2B research",
-      "Competitor benchmarking and evaluation",
-    ],
-    footnote:
-      "Qualitative Research | Quantitative Research | AI Tools-Based Research | Secondary Research",
-  },
-  {
-    title: "Strategy — Business Growth Blueprint",
-    image: strategyImage,
-    to: "/business-strategy",
-    bullets: [
-      "Business modelling and growth blueprint for sustained value creation",
-      "Go to market strategy",
-      "Mid-term and long-term financial planning",
-      "Market and financial feasibility for new ventures",
-    ],
-    sub: [
-      "Product and pricing strategy",
-      "Sales and distribution planning",
-      "Brand strategy and marketing communication planning",
-    ],
-  },
-  {
-    title: "Execution — Strategy Implementation, Facilitation & Funding Support",
-    image: executionImage,
-    to: "/strategy-execution",
-  },
-];
 
 const industries = [
   "FMCG — Foods & Beverages",
@@ -198,27 +157,25 @@ function Home() {
         <div className="grid items-center gap-16 md:grid-cols-[1.1fr_0.9fr]">
           <div>
             <Reveal>
-              <SectionTitle className="mt-6">
-                Research and Growth Plans, Built Together.
-              </SectionTitle>
+              <SectionTitle>Research and Growth Plans, Built Together.</SectionTitle>
             </Reveal>
             <Reveal delay={0.1} className="mt-10 space-y-6">
-              <p className="prose-instrex">
-                At Instrex, we help FMCG (foods &amp; beverages, personal care, cosmetics, &amp; home
-                care), fashion, engineering &amp; technology, manufacturing, and consumer services
-                companies in India turn market insight into business growth. We connect research with
-                strategy so that decisions are backed by evidence, not guesswork.
+              <p className="prose-body">
+                We help FMCG (foods &amp; beverages, personal care, cosmetics, &amp; home care),
+                fashion, engineering &amp; technology, manufacturing, and consumer services companies
+                in India turn market insight into business growth. We connect research with strategy
+                so that decisions are backed by evidence, not guesswork.
               </p>
-              <p className="prose-instrex">
+              <p className="prose-body">
                 Most consulting firms treat research and strategy as separate services. We don’t.
                 Every recommendation we make is grounded in what we’ve actually found in the market,
                 and every research project we run is designed with a business decision in mind.
               </p>
-              <p className="prose-instrex">
+              <p className="prose-body">
                 We stay involved through execution too. A strategy is only useful if it leaves the
                 slide deck, so we work alongside our clients to make sure it does.
               </p>
-              <p className="prose-instrex">
+              <p className="prose-body">
                 Our team has led businesses and built new ventures across industries. That experience
                 shapes how we advise: practical, specific, and grounded in what actually moves a
                 business forward.
@@ -232,7 +189,7 @@ function Home() {
               loading="lazy"
               width={1600}
               height={1200}
-              className="aspect-[4/5] w-full rounded-lg object-cover shadow-[var(--shadow-elegant)]"
+              className="aspect-[4/5] w-full object-cover"
             />
           </Reveal>
         </div>
@@ -288,10 +245,10 @@ function Home() {
             "Market and financial feasibility for new ventures",
           ]}
         />
-        <div className="space-y-1.5 border-l border-gold/30 pl-6">
-          <p className="prose-instrex">Product and pricing strategy</p>
-          <p className="prose-instrex">Sales and distribution planning</p>
-          <p className="prose-instrex">Brand strategy and marketing communication planning</p>
+        <div className="space-y-1.5">
+          <p className="prose-body">Product and pricing strategy</p>
+          <p className="prose-body">Sales and distribution planning</p>
+          <p className="prose-body">Brand strategy and marketing communication planning</p>
         </div>
         <Link
           to="/business-strategy"
@@ -313,14 +270,14 @@ function Home() {
           <p className="font-sans text-sm font-semibold text-ink-foreground">
             Strategy Implementation
           </p>
-          <p className="prose-instrex mt-3">
+          <p className="prose-body mt-3">
             Facilitating execution through a network of trusted specialist partners, including
             marketing specialists, sales professionals, finance experts, and investment bankers.
           </p>
         </div>
         <div>
           <p className="font-sans text-sm font-semibold text-ink-foreground">Funding Support</p>
-          <p className="prose-instrex mt-3">
+          <p className="prose-body mt-3">
             Connecting ambitious businesses with the right investors.
           </p>
           <GoldList
@@ -342,25 +299,25 @@ function Home() {
 
       <Section>
         <Reveal>
-          <SectionTitle className="mt-6">Industries We Serve</SectionTitle>
+          <SectionTitle>Industries We Serve</SectionTitle>
         </Reveal>
         <Reveal delay={0.1} className="mt-10 max-w-3xl">
-          <p className="prose-instrex">
+          <p className="prose-body">
             We work across four core sectors: FMCG (foods, personal care, and home care), fashion and
             lifestyle, engineering and technology, manufacturing, and consumer services. Each comes
             with its own consumer behavior, channel structure, and growth challenges, and our research
             and strategy work is built around that difference rather than a generic template.
           </p>
         </Reveal>
-        <Stagger className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {industries.map((industry) => (
-            <StaggerItem key={industry}>
-              <div className="glass lift rounded-lg px-6 py-5">
-                <p className="font-sans text-sm font-semibold">{industry}</p>
-              </div>
-            </StaggerItem>
-          ))}
-        </Stagger>
+        <Reveal delay={0.15} className="mt-12 max-w-3xl">
+          <ul className="space-y-5">
+            {industries.map((industry) => (
+              <li key={industry} className="font-sans text-base font-medium md:text-lg">
+                {industry}
+              </li>
+            ))}
+          </ul>
+        </Reveal>
       </Section>
 
       <Section tone="ink">
@@ -370,11 +327,11 @@ function Home() {
         <Reveal delay={0.12} className="mt-14">
           <img
             src={brandLogos}
-            alt="Logos of brands Instrex has worked with"
+            alt="Logos of brands we have worked with"
             loading="lazy"
             width={1600}
             height={900}
-            className="w-full rounded-lg object-contain"
+            className="w-full object-contain"
           />
         </Reveal>
       </Section>

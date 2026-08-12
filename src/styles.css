@@ -5,9 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * INSTREX — luxury consulting design system.
+ * Luxury consulting design system.
  * Ink / charcoal / platinum / gold on soft off-white.
- * All colours are oklch semantic tokens. Never hardcode colours in components.
  */
 
 @theme inline {
@@ -53,7 +52,6 @@
 :root {
   --radius: 0.25rem;
 
-  /* Arikap palette: deep navy, warm ivory, amber gold */
   --ink: #101a2e;
   --ink-foreground: #f7f5f0;
   --charcoal: #16203a;
@@ -84,8 +82,6 @@
 
   --shadow-elegant: 0 24px 60px -24px color-mix(in oklab, #101a2e 26%, transparent);
   --shadow-lift: 0 2px 8px -2px color-mix(in oklab, #101a2e 12%, transparent);
-  --gradient-gold: linear-gradient(100deg, var(--gold), var(--gold-soft));
-  --gradient-ink: linear-gradient(160deg, #101a2e, #16203a);
 }
 
 .dark {
@@ -161,13 +157,6 @@
   color: var(--gold);
 }
 
-@utility gold-rule {
-  display: block;
-  width: 3.5rem;
-  height: 2px;
-  background: var(--gradient-gold);
-}
-
 @utility lift {
   transition:
     transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
@@ -180,7 +169,7 @@
   }
 }
 
-@utility prose-instrex {
+@utility prose-body {
   font-size: 1.0625rem;
   line-height: 1.85;
   color: var(--muted-foreground);

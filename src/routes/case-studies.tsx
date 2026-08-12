@@ -6,19 +6,20 @@ import qualImage from "@/assets/case-qual.jpg";
 import brandImage from "@/assets/case-brand.jpg";
 import gtmImage from "@/assets/case-gtm.jpg";
 import financialImage from "@/assets/case-financial.jpg";
-import { Stagger, StaggerItem, Reveal } from "@/components/site/Reveal";
-import { Kicker, PageHeader, Section, SectionTitle } from "@/components/site/Layout";
+import bridgeImage from "@/assets/bridge-insight-impact.jpg";
+import { Reveal } from "@/components/site/Reveal";
+import { PageHeader, Section } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
-      { title: "Case Studies — Instrex Consulting Work" },
+      { title: "Case Studies" },
       {
         name: "description",
         content:
-          "Instrex case studies across quantitative research, qualitative research, brand strategy, GTM planning, and financial analysis.",
+          "Case studies across quantitative research, qualitative research, brand strategy, GTM planning, and financial analysis.",
       },
-      { property: "og:title", content: "Case Studies — Instrex Consulting Work" },
+      { property: "og:title", content: "Case Studies" },
       {
         property: "og:description",
         content:
@@ -67,41 +68,37 @@ function CaseStudies() {
     <>
       <PageHeader
         title="Case Studies"
-        image={qualImage}
-        imageAlt="Instrex consulting case studies"
+        image={bridgeImage}
+        imageAlt="Selected research and strategy case studies"
       />
       <Section>
-        <Reveal>
-          <Kicker>Selected work</Kicker>
-          <SectionTitle className="mt-6">Case Studies</SectionTitle>
-        </Reveal>
-        <Stagger className="mt-16 space-y-6">
-          {cases.map((c) => (
-            <StaggerItem key={c.to}>
+        <div className="space-y-0">
+          {cases.map((c, i) => (
+            <Reveal key={c.to} delay={i * 0.05}>
               <Link
                 to={c.to}
-                className="lift group grid gap-8 overflow-hidden rounded-lg border border-hairline md:grid-cols-[0.42fr_1fr] md:items-center"
+                className="group grid gap-8 py-12 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-14"
               >
                 <img
                   src={c.image}
                   alt={c.title}
                   loading="lazy"
                   width={1024}
-                  height={1024}
-                  className="h-56 w-full object-cover transition-transform duration-700 group-hover:scale-105 md:h-full"
+                  height={720}
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
                 />
-                <div className="p-8 md:pr-12">
+                <div>
                   <p className="kicker">{c.label}</p>
-                  <h2 className="mt-4 font-display text-2xl leading-snug md:text-3xl">{c.title}</h2>
-                  <span className="mt-6 inline-flex items-center gap-2 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase">
+                  <h2 className="mt-5 font-display text-2xl leading-snug md:text-3xl">{c.title}</h2>
+                  <span className="mt-8 inline-flex items-center gap-2 font-sans text-[0.7rem] tracking-[0.2em] text-gold uppercase">
                     Read case study
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
-            </StaggerItem>
+            </Reveal>
           ))}
-        </Stagger>
+        </div>
       </Section>
     </>
   );

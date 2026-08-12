@@ -1,19 +1,20 @@
 import { createFileRoute } from "@tanstack/react-router";
 
+import executionArt from "@/assets/art-strategy-implementation.png";
 import executionImage from "@/assets/service-execution.jpg";
+import { FeatureBand, GoldList, PageHeader, Section } from "@/components/site/Layout";
 import { Reveal } from "@/components/site/Reveal";
-import { PageHeader, Panel, Section, SectionTitle } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/strategy-execution")({
   head: () => ({
     meta: [
-      { title: "Strategy Execution & Funding Support — Instrex" },
+      { title: "Strategy Execution & Funding Support" },
       {
         name: "description",
         content:
           "We convert strategic goals into clear, actionable plans with defined timelines, responsibilities, and measurable outcomes.",
       },
-      { property: "og:title", content: "Strategy Execution & Funding Support — Instrex" },
+      { property: "og:title", content: "Strategy Execution & Funding Support" },
       {
         property: "og:description",
         content:
@@ -30,71 +31,51 @@ function StrategyExecution() {
       <PageHeader
         kicker="Execution"
         title="Strategy Execution"
-        image={executionImage}
-        imageAlt="Executives reviewing an implementation roadmap"
+        image={executionArt}
+        imageAlt="Strategy implementation with specialist partners"
       />
 
-      <Section>
-        <Reveal>
-          <SectionTitle>Strategy Implementation</SectionTitle>
-        </Reveal>
-        <div className="mt-12 grid gap-14 md:grid-cols-[1.05fr_0.95fr] md:items-start">
-          <Reveal className="space-y-6">
-            <p className="prose-instrex">
-              We convert strategic goals into clear, actionable plans with defined timelines,
-              responsibilities, and measurable outcomes. Every initiative includes milestone tracking,
-              so progress stays visible and accountable.
-            </p>
-            <p className="prose-instrex">
-              Execution is backed by our network of trusted specialist partners, including marketing
-              agencies, finance professionals, investment bankers, and other domain experts, brought
-              in exactly where they’re needed.
-            </p>
-            <p className="prose-instrex">
-              A strategy is only useful once it leaves the slide deck. That’s the standard we hold
-              execution to.
-            </p>
-          </Reveal>
-          <Reveal delay={0.15}>
-            <div className="relative">
-              <div className="absolute -top-4 -right-4 h-full w-full border border-gold/30" />
-              <img
-                src={executionImage}
-                alt="Strategy implementation with specialist partners"
-                loading="lazy"
-                width={1024}
-                height={1024}
-                className="relative aspect-[4/5] w-full object-cover"
-              />
-            </div>
-          </Reveal>
-        </div>
-      </Section>
+      <FeatureBand
+        eyebrow="Implementation"
+        title="Strategy Implementation"
+        image={executionImage}
+        imageAlt="Executives reviewing an implementation roadmap"
+      >
+        <p className="prose-body">
+          We convert strategic goals into clear, actionable plans with defined timelines,
+          responsibilities, and measurable outcomes. Every initiative includes milestone tracking, so
+          progress stays visible and accountable.
+        </p>
+        <p className="prose-body">
+          Execution is backed by our network of trusted specialist partners, including marketing
+          agencies, finance professionals, investment bankers, and other domain experts, brought in
+          exactly where they’re needed.
+        </p>
+        <p className="prose-body">
+          A strategy is only useful once it leaves the slide deck. That’s the standard we hold
+          execution to.
+        </p>
+      </FeatureBand>
 
       <Section tone="ink">
-        <Reveal>
-          <SectionTitle>Funding Support</SectionTitle>
+        <Reveal className="mx-auto max-w-3xl space-y-8">
+          <h2 className="text-3xl leading-tight font-normal md:text-[2.75rem]">Funding Support</h2>
+          <p className="prose-body">
+            We connect high-potential startups in India with early-stage funding through a network of
+            HNI investors. Every introduction goes through a transparent due diligence process, so
+            founders end up partnering with the right investors, not just any investor.
+          </p>
+          <p className="prose-body">
+            We also help startups build pitch decks that clearly show their value proposition, market
+            opportunity, and growth potential, backed by real data rather than assumptions.
+          </p>
+          <GoldList
+            items={[
+              "Creating investor-ready pitch decks",
+              "Facilitating funding through our trusted investor network",
+            ]}
+          />
         </Reveal>
-        <div className="mt-12 grid gap-8 md:grid-cols-2">
-          <Reveal delay={0.1}>
-            <Panel className="h-full">
-              <p className="prose-instrex">
-                Instrex connects high-potential startups in India with early-stage funding through a
-                network of HNI investors. Every introduction goes through a transparent due diligence
-                process, so founders end up partnering with the right investors, not just any
-                investor.
-              </p>
-            </Panel>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <Panel className="h-full">
-              <p className="prose-instrex">
-                We also help startups build pitch decks that clearly show their value proposition,
-                market opportunity, and growth potential, backed by real data rather than assumptions.
-              </p>
-            </Panel>
-          </Reveal>
-        </div>
       </Section>
     </>
   );

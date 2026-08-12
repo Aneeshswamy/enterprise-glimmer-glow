@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, Moon, Sun, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-import logoImage from "@/assets/instrex-logo.png";
+import logoWhite from "@/assets/instrex-logo-white.png";
 
 type NavItem = { label: string; to: string; children?: { label: string; to: string }[] };
 
@@ -45,7 +45,7 @@ function useScrolled() {
 }
 
 function ThemeToggle() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
   useEffect(() => {
     document.documentElement.classList.toggle("dark", dark);
   }, [dark]);
@@ -64,15 +64,13 @@ function ThemeToggle() {
 function Wordmark() {
   return (
     <Link to="/" className="group flex items-center leading-none">
-      <span className="rounded-md bg-white px-3 py-2 shadow-[var(--shadow-lift)] transition-transform duration-500 group-hover:scale-[1.02]">
-        <img
-          src={logoImage}
-          alt="Instrex — Insights I Strategy I Execution"
-          width={1568}
-          height={654}
-          className="h-7 w-auto md:h-8"
-        />
-      </span>
+      <img
+        src={logoWhite}
+        alt="Instrex — Insights I Strategy I Execution"
+        width={957}
+        height={349}
+        className="h-8 w-auto transition-transform duration-500 group-hover:scale-[1.02] md:h-10"
+      />
     </Link>
   );
 }
@@ -84,8 +82,8 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "glass-dark py-3 shadow-[var(--shadow-lift)]" : "border-b border-transparent py-6"
+      className={`fixed inset-x-0 top-0 z-50 glass-dark transition-all duration-500 ${
+        scrolled ? "py-3 shadow-[var(--shadow-lift)]" : "py-5"
       }`}
     >
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6">
@@ -191,16 +189,14 @@ export function SiteFooter() {
     <footer className="bg-ink px-6 py-16 text-ink-foreground">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 md:flex-row md:items-end md:justify-between">
         <div>
-          <span className="inline-block rounded-md bg-white px-4 py-3">
-            <img
-              src={logoImage}
-              alt="Instrex — Insights I Strategy I Execution"
-              width={1568}
-              height={654}
-              loading="lazy"
-              className="h-9 w-auto"
-            />
-          </span>
+          <img
+            src={logoWhite}
+            alt="Instrex — Insights I Strategy I Execution"
+            width={957}
+            height={349}
+            loading="lazy"
+            className="h-10 w-auto"
+          />
         </div>
         <div className="space-y-2 font-sans text-sm text-ink-foreground/70">
           <p>

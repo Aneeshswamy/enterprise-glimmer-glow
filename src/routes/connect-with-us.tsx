@@ -9,13 +9,13 @@ import { PageHeader, Panel, Section } from "@/components/site/Layout";
 export const Route = createFileRoute("/connect-with-us")({
   head: () => ({
     meta: [
-      { title: "Connect with us — Instrex Consulting" },
+      { title: "Connect with us" },
       {
         name: "description",
         content:
-          "Submit your enquiry below. Contact Instrex at business@instrex.in or +91 7011845620.",
+          "Submit your enquiry below. Contact us at business@instrex.in or +91 7011845620.",
       },
-      { property: "og:title", content: "Connect with us — Instrex Consulting" },
+      { property: "og:title", content: "Connect with us" },
       { property: "og:description", content: "Submit your enquiry below" },
     ],
   }),
@@ -33,7 +33,7 @@ function Connect() {
       <PageHeader
         title="Connect with us"
         image={heroImage}
-        imageAlt="Instrex consulting office"
+        imageAlt="Consulting office for client conversations"
       />
 
       <Section>
